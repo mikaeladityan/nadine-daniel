@@ -2,663 +2,2091 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Undangan Pernikahan — Daniel &amp; Nadine</title>
-    <meta name="description" content="Undangan pernikahan Daniel Dwi Prajitno & Nadine Ersabilla Oktavia, Minggu 23 Agustus 2026 di Hotel Edotel Sidoarjo." />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,viewport-fit=cover"
+    />
+    <title>Netflix THE WEDDING — Nadine &amp; Daniel</title>
+    <meta
+      name="description"
+      content="Undangan pernikahan Daniel Dwi Prajitno & Nadine Ersabilla Oktavia, 23 Agustus 2026, Hotel Edotel Sidoarjo."
+    />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@500;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:wght@300;400;500&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-      html{scroll-behavior:smooth;background:#f5eded}
-      body{max-width:430px;margin:0 auto;background:#fff;color:#2a1a1a;font-family:'Lato',sans-serif;font-weight:300;overflow-x:hidden;box-shadow:0 0 40px rgba(180,0,0,.12)}
-      a{text-decoration:none;color:inherit}
-      img{max-width:100%;display:block}
-      :root{
-        --red:#c8102e;--red-light:#e8304a;--red-dark:#8b0000;
-        --cream:#fff8f8;--warm:#f9f0f0;--text:#2a1a1a;--muted:#7a5555;--border:#d4a0a0;
-        --display:'Pacifico',cursive;--script:'Dancing Script',cursive;--body:'Lato',sans-serif;--r:16px
+      /* === RESET === */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-      .wavy-top{width:100%;height:28px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 28'%3E%3Cpath d='M0,14 C10,4 20,24 30,14 C40,4 50,24 60,14 C70,4 80,24 90,14 C100,4 110,24 120,14 C130,4 140,24 150,14 C160,4 170,24 180,14 C190,4 200,24 200,14' stroke='%23c8102e' stroke-width='3' fill='none'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:80px 28px}
-      .wavy-bot{width:100%;height:28px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 28'%3E%3Cpath d='M0,14 C10,4 20,24 30,14 C40,4 50,24 60,14 C70,4 80,24 90,14 C100,4 110,24 120,14 C130,4 140,24 150,14 C160,4 170,24 180,14 C190,4 200,24 200,14' stroke='%23c8102e' stroke-width='3' fill='none'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:80px 28px;transform:scaleY(-1)}
-      /* Animations */
-      .muncul{transform:translateY(60px) scale(.95);opacity:0;transition:opacity .6s ease,transform .9s ease}
-      .muncul.active{transform:translateY(0);opacity:1}
-      .muncul-kiri{transform:translateX(-80px) scale(.95);opacity:0;transition:opacity .6s ease,transform .9s ease}
-      .muncul-kiri.active{transform:translateX(0);opacity:1}
-      .muncul-kanan{transform:translateX(80px) scale(.95);opacity:0;transition:opacity .6s ease,transform .9s ease}
-      .muncul-kanan.active{transform:translateX(0);opacity:1}
-      .zoom{transform:scale(.6);opacity:0;transition:opacity .5s ease,transform 1.2s ease}
-      .zoom.active{transform:scale(1);opacity:1}
-      @keyframes floatHeart{0%,100%{transform:translateY(0) scale(1);opacity:.8}50%{transform:translateY(-12px) scale(1.12);opacity:1}}
-      .float-heart{animation:floatHeart 2.8s ease-in-out infinite;display:inline-block}
-      .float-heart:nth-child(2){animation-delay:.4s}
-      .float-heart:nth-child(3){animation-delay:.8s}
-      @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-      @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(200,16,46,.45)}70%{box-shadow:0 0 0 12px rgba(200,16,46,0)}100%{box-shadow:0 0 0 0 rgba(200,16,46,0)}}
-      @view-transition{navigation:auto}
-      ::view-transition-group(root){animation-duration:1.2s}
-      ::view-transition-old(root){animation-name:vt-out}
-      ::view-transition-new(root){animation-name:vt-in}
-      @keyframes vt-out{to{scale:1.1;opacity:0;filter:blur(4px)}}
-      @keyframes vt-in{from{scale:1.1;opacity:0;filter:blur(4px)}}
-      /* Splash */
-      #splash{position:fixed;inset:0;background:#fff;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transition:opacity .7s ease}
-      #splash.fade-out{opacity:0;pointer-events:none}
-      .splash-bow{width:80px;animation:splashBowDrop 1.2s cubic-bezier(.34,1.56,.64,1) forwards;opacity:0}
-      @keyframes splashBowDrop{0%{opacity:0;transform:scale(.3) rotate(-15deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
-      .splash-sub{font-family:var(--script);font-size:15px;color:var(--muted);letter-spacing:1px;animation:splashFade 1.4s .3s ease forwards;opacity:0}
-      .splash-title{font-family:var(--display);font-size:32px;color:var(--red);animation:splashFade 1.4s .5s ease forwards;opacity:0;text-align:center;line-height:1.2}
-      .splash-line{width:0;height:2px;background:var(--red);animation:splashLine 1.6s .6s ease forwards;border-radius:2px}
-      @keyframes splashFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-      @keyframes splashLine{from{width:0}to{width:120px}}
-      /* Scroll bar */
-      #scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--red),#ff6b8a);z-index:50000;box-shadow:0 0 8px rgba(200,16,46,.7);transition:width .08s linear;pointer-events:none;border-radius:0 2px 2px 0}
-      /* Cover */
-      #section-cover{position:relative;min-height:100vh;background:#fff;display:flex;flex-direction:column;align-items:center;z-index:999;overflow:hidden}
-      .cover-border-left,.cover-border-right{position:absolute;top:0;bottom:0;width:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 200' preserveAspectRatio='none'%3E%3Cpath d='M11,0 C3,10 19,20 11,30 C3,40 19,50 11,60 C3,70 19,80 11,90 C3,100 19,110 11,120 C3,130 19,140 11,150 C3,160 19,170 11,180 C3,190 19,200 11,200' stroke='%23c8102e' stroke-width='3' fill='none'/%3E%3C/svg%3E");background-repeat:repeat-y;background-size:22px 60px;pointer-events:none;z-index:5}
-      .cover-border-left{left:0}
-      .cover-border-right{right:0;transform:scaleX(-1)}
-      .cover-top-row,.cover-bottom-row{display:flex;justify-content:space-between;align-items:flex-start;width:100%;padding:10px 10px 0}
-      .cover-bottom-row{align-items:flex-end;padding:0 10px 10px;margin-top:auto}
-      .cover-center{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 36px 0;gap:10px;flex:1}
-      .cover-invite-text{font-family:var(--script);font-size:16px;color:var(--muted);font-style:italic;margin-top:4px}
-      .cover-names{font-family:var(--display);font-size:34px;line-height:1.15;background:linear-gradient(120deg,var(--red-dark),var(--red),#ff4466,var(--red-dark));background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
-      .cover-heart-frame{position:relative;width:200px;height:190px;flex-shrink:0}
-      .cover-heart-frame svg{position:absolute;inset:0;width:100%;height:100%;z-index:2}
-      .cover-heart-frame img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68%;height:78%;object-fit:cover;object-position:top center;border-radius:50% 50% 50% 50% / 40% 40% 60% 60%;z-index:1}
-      .mini-hearts{position:absolute;inset:0;pointer-events:none;z-index:3}
-      .mini-hearts span{position:absolute;color:var(--red);font-size:14px;animation:floatHeart 2.5s ease-in-out infinite}
-      .mini-hearts span:nth-child(1){top:5%;left:10%;animation-delay:0s;font-size:12px}
-      .mini-hearts span:nth-child(2){top:10%;right:8%;animation-delay:.5s;font-size:16px}
-      .mini-hearts span:nth-child(3){bottom:12%;left:5%;animation-delay:1s;font-size:10px}
-      .mini-hearts span:nth-child(4){bottom:8%;right:12%;animation-delay:.3s;font-size:14px}
-      .mini-hearts span:nth-child(5){top:40%;left:2%;animation-delay:.8s;font-size:10px}
-      .mini-hearts span:nth-child(6){top:35%;right:2%;animation-delay:1.2s;font-size:12px}
-      .cover-date{font-family:var(--script);font-size:26px;font-weight:700;color:var(--text);letter-spacing:3px;margin:4px 0}
-      .cover-kepada-block{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:12px 18px;width:100%;max-width:280px;text-align:center}
-      .cover-kepada{font-size:12px;color:var(--muted);margin-bottom:4px;font-style:italic}
-      #namatamu{font-family:var(--script);font-size:20px;font-weight:700;color:var(--red)}
-      .cover-note{font-size:10px;color:var(--muted);margin-top:6px;font-style:italic}
-      #tombol-buka{margin-top:6px}
-      .btn-open{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;border:none;border-radius:50px;padding:12px 28px;font-family:var(--script);font-size:17px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(200,16,46,.4);transition:all .3s;text-decoration:none;animation:pulseRing 2.2s ease infinite}
-      .btn-open:hover{background:var(--red-dark);transform:scale(1.05)}
-      /* Buttons */
-      .btn{display:inline-flex;align-items:center;gap:8px;background:var(--warm);color:var(--text);border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-family:var(--body);font-size:12px;font-weight:400;cursor:pointer;transition:all .3s;text-decoration:none}
-      .btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
-      .btn-red{background:var(--red);color:#fff;border-color:var(--red)}
-      .btn-red:hover{background:var(--red-dark);border-color:var(--red-dark)}
-      /* Section */
-      .section-wrap{position:relative;background:#fff;padding:30px 22px;overflow:hidden}
-      .section-wrap.cream{background:var(--cream)}
-      .sec-divider{display:flex;align-items:center;gap:12px;margin:10px 0 22px}
-      .sec-divider-line{flex:1;height:1.5px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
-      .sec-title{font-family:var(--display);font-size:28px;color:var(--red);text-align:center;line-height:1.2}
-      .sec-subtitle{font-family:var(--script);font-size:17px;color:var(--muted);text-align:center;margin-top:2px}
-      .badge-red{display:inline-block;background:var(--red);color:#fff;padding:2px 10px;border-radius:50px;font-size:11px;font-weight:700}
-      /* Opening */
-      #opening{background:#fff;padding-bottom:0;overflow:hidden}
-      .opening-hero{position:relative;background:var(--cream);border:2px solid var(--border);border-radius:var(--r);margin:12px;overflow:hidden;padding:24px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-      .opening-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,16,46,.06) 0%,transparent 70%);pointer-events:none}
-      .opening-hero-photo{width:180px;height:200px;border-radius:50% 50% 50% 50% / 45% 45% 55% 55%;object-fit:cover;object-position:center top;border:4px solid var(--red);box-shadow:0 6px 24px rgba(200,16,46,.25);margin:8px auto;animation:pulseRing 3s ease infinite}
-      .opening-bismillah{font-family:var(--script);font-size:22px;color:var(--red);font-weight:700}
-      .opening-quran{font-size:12px;color:var(--muted);line-height:1.7;font-style:italic;max-width:320px;border-left:3px solid var(--red);padding-left:12px;text-align:left;margin:0 auto}
-      .opening-quran-ref{font-size:11px;color:var(--red);font-weight:700;text-align:center}
-      .opening-invite-text{font-size:13px;line-height:1.7;color:var(--text);max-width:300px}
-      .opening-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:4px}
-      /* Couple */
-      #couple{background:#fff;overflow:hidden}
-      .couple-intro{text-align:center;font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:4px}
-      .person-card{background:var(--cream);border:1.5px solid var(--border);border-radius:var(--r);padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;position:relative;overflow:hidden;margin-bottom:16px}
-      .person-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--red)}
-      .person-photo-wrap{position:relative;width:130px;height:150px}
-      .person-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50% 50% 50% 50% / 40% 40% 60% 60%;border:3px solid var(--red)}
-      .person-name{font-family:var(--display);font-size:22px;color:var(--red);line-height:1.1}
-      .person-fullname{font-family:var(--script);font-size:16px;color:var(--text);font-weight:500}
-      .person-parent{font-size:12px;color:var(--muted);line-height:1.7}
-      .dengan-text{font-family:var(--script);font-size:28px;color:var(--text);text-align:center;margin:4px 0}
-      /* Date */
-      #date{background:var(--cream);overflow:hidden}
-      .event-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:16px;box-shadow:0 2px 16px rgba(200,16,46,.08)}
-      .event-card-header{background:var(--red);color:#fff;padding:10px 16px;display:flex;align-items:center;gap:10px;font-family:var(--script);font-size:18px;font-weight:700}
-      .event-card-body{padding:16px;display:flex;gap:14px;align-items:flex-start}
-      .event-card-img{width:90px;height:110px;object-fit:cover;border-radius:10px;flex-shrink:0;border:2px solid var(--border)}
-      .event-card-info{flex:1;display:flex;flex-direction:column;gap:8px}
-      .event-detail-row{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text);line-height:1.5}
-      .event-detail-row i{color:var(--red);font-size:13px;margin-top:2px;flex-shrink:0}
-      .event-card-actions{padding:0 16px 16px}
-      .countdown-wrap{background:var(--red);border-radius:var(--r);padding:20px 16px;text-align:center;margin-bottom:16px;position:relative;overflow:hidden}
-      .countdown-wrap::before{content:'♥';position:absolute;font-size:120px;color:rgba(255,255,255,.06);top:-20px;right:-20px;line-height:1}
-      .countdown-label{font-family:var(--script);font-size:18px;color:rgba(255,255,255,.9);margin-bottom:12px;font-weight:500}
-      .countdown-items{list-style:none;display:flex;justify-content:center;gap:8px}
-      .countdown-item{flex:1;max-width:70px}
-      .countdown-cell{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:10px 4px 8px;text-align:center;backdrop-filter:blur(4px)}
-      .cd-digit{display:block;font-family:var(--display);font-size:26px;color:#fff;line-height:1.1}
-      .cd-label{display:block;font-size:9px;color:rgba(255,255,255,.8);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
-      /* Timeline */
-      #lovestory{background:#fff;overflow:visible}
-      .timeline{position:relative;margin-top:20px;overflow:visible}
-      .timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--red),#ffb3c0,var(--red));transform:translateX(-50%);z-index:0;border-radius:3px}
-      .tl-item{position:relative;display:flex;width:100%;margin-bottom:28px;overflow:visible}
-      .tl-item.left .tl-content{margin-right:calc(50% + 24px);text-align:right}
-      .tl-item.right .tl-content{margin-left:calc(50% + 24px);text-align:left}
-      .tl-icon{position:absolute;left:50%;top:10px;transform:translateX(-50%);width:30px;height:30px;background:var(--red);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 3px var(--red);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;z-index:2}
-      .tl-content{background:var(--cream);border:1.5px solid var(--border);padding:10px 12px;border-radius:10px;flex:1;min-width:0}
-      .tl-title{font-family:var(--script);font-size:16px;color:var(--red);font-weight:700;display:block}
-      .tl-date{font-size:10px;color:var(--muted);display:block;margin-top:4px}
-      .tl-excerpt{font-size:11px;color:var(--muted);line-height:1.6;margin-top:6px}
-      /* Gallery */
-      #gallery{background:var(--cream);overflow:hidden}
-      .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-      .gallery-item{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:12px;border:2px solid var(--border);cursor:pointer;transition:transform .2s}
-      .gallery-item.wide{grid-column:1 / -1;aspect-ratio:4/3}
-      .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-      .gallery-item:hover img{transform:scale(1.05)}
-      .gallery-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(transparent,rgba(200,16,46,.2));pointer-events:none;border-radius:0 0 12px 12px}
-      .gallery-item:hover{transform:scale(1.02);box-shadow:0 0 0 2.5px var(--red),0 8px 24px rgba(200,16,46,.2);z-index:2}
-      .gallery-overlay{position:absolute;inset:0;background:transparent;transition:background .3s}
-      .gallery-item:hover .gallery-overlay{background:rgba(200,16,46,.1)}
-      /* Gift */
-      #gift{background:#fff;overflow:hidden}
-      .gift-intro{font-size:13px;line-height:1.8;color:var(--muted);text-align:center;margin-bottom:16px;font-style:italic}
-      .gift-addr{display:flex;align-items:center;gap:14px;background:var(--cream);border:1.5px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:12px}
-      .gift-addr-icon{width:50px;height:50px;background:var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0}
-      .gift-addr-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
-      .gift-addr-desc{font-size:12px;color:var(--muted);line-height:1.5}
-      .bank-cards{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-      .bank-card{background:var(--cream);border:1.5px solid var(--border);border-radius:var(--r);padding:16px;text-align:center}
-      .bank-card img{max-width:30%;margin:0 auto 8px}
-      .bank-acct-name{font-size:12px;color:var(--muted);margin-bottom:4px}
-      .bank-acct-num{font-family:var(--display);font-size:18px;color:var(--text);letter-spacing:1px;margin-bottom:10px}
-      .copy-btn{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;border:none;border-radius:50px;padding:7px 18px;font-family:var(--body);font-size:11px;cursor:pointer;transition:background .3s}
-      .copy-btn:hover{background:var(--red-dark)}
-      /* RSVP */
-      #wish{background:var(--cream);overflow:hidden}
-      .rsvp-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:20px;overflow:hidden}
-      .rsvp-header{font-size:13px;text-align:center;padding:8px 0;cursor:pointer;border-bottom:1.5px solid var(--border);margin-bottom:14px;color:var(--muted);font-style:italic}
-      .rsvp-counts{display:flex;gap:8px;margin-bottom:14px}
-      .rsvp-count{flex:1;padding:10px;border-radius:10px;text-align:center;font-size:11px;font-weight:700;line-height:1.6;color:#fff}
-      .rsvp-count.hadir{background:#3d9a62}
-      .rsvp-count.tidak{background:var(--red)}
-      .rsvp-form input,.rsvp-form textarea,.rsvp-form select{width:100%;background:var(--warm);border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;color:var(--text);font-family:var(--body);font-size:13px;margin-bottom:10px;outline:none;transition:border-color .3s}
-      .rsvp-form input:focus,.rsvp-form textarea:focus{border-color:var(--red)}
-      .rsvp-form input::placeholder,.rsvp-form textarea::placeholder{color:var(--border)}
-      .rsvp-form textarea{resize:none;min-height:70px}
-      .rsvp-confirm{display:flex;gap:8px;margin-bottom:10px}
-      .confirm-btn{flex:1;padding:10px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;font-family:var(--body);font-size:12px;font-weight:700;background:var(--warm);color:var(--text);transition:all .3s}
-      .confirm-btn.yes{background:#3d9a62;color:#fff;border-color:#3d9a62}
-      .confirm-btn.no{background:var(--red);color:#fff;border-color:var(--red)}
-      .rsvp-submit{width:100%;background:var(--red);color:#fff;border:none;border-radius:50px;padding:13px;font-family:var(--script);font-size:17px;font-weight:700;cursor:pointer;transition:background .3s}
-      .rsvp-submit:hover{background:var(--red-dark)}
-      .wishes-box{margin-top:14px;max-height:30vh;overflow-y:auto;scrollbar-width:none}
-      .wishes-box::-webkit-scrollbar{display:none}
-      .wish-item{padding:10px 0;border-bottom:1px solid var(--border)}
-      .wish-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-      .wish-avatar{width:28px;height:28px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
-      .wish-name{font-size:12px;font-weight:700;color:var(--text)}
-      .wish-text{font-size:12px;color:var(--muted);line-height:1.5;padding-left:36px}
-      /* Closing */
-      #closing{background:#fff;overflow:hidden;padding-bottom:0}
-      .closing-inner{position:relative;background:var(--cream);border:2px solid var(--border);border-radius:var(--r);margin:16px 12px;padding:30px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;overflow:hidden}
-      .closing-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(200,16,46,.07) 0%,transparent 70%);pointer-events:none}
-      .closing-names{font-family:var(--display);font-size:32px;color:var(--red);line-height:1.2}
-      .closing-msg{font-size:13px;color:var(--muted);line-height:1.8;max-width:280px;font-style:italic}
-      .family-row{display:flex;gap:16px;width:100%}
-      .family-col{flex:1}
-      .family-label{font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px}
-      .family-desc{font-size:11px;color:var(--muted);font-style:italic}
-      .family-names{font-size:12px;color:var(--text);line-height:1.6}
-      .footer-credit{text-align:center;padding:14px;font-size:12px;color:var(--muted)}
-      .footer-credit a{color:var(--red)}
-      /* Audio */
-      #audio-btn{position:fixed;bottom:20px;right:max(16px,calc((100vw - 430px)/2 + 16px));z-index:9999;width:auto!important;height:auto!important;border-radius:50px!important;padding:9px 16px 9px 12px!important;background:#fff;border:2px solid var(--red)!important;display:inline-flex!important;align-items:center!important;gap:10px!important;cursor:pointer;box-shadow:0 4px 18px rgba(200,16,46,.22);transition:transform .2s}
-      #audio-btn:hover{transform:scale(1.07)}
-      .audio-eq{display:flex;align-items:flex-end;gap:2px;height:16px}
-      .audio-eq span{display:block;width:3px;border-radius:2px;background:var(--red);transform-origin:bottom;animation:eqBar .7s ease-in-out infinite alternate}
-      .audio-eq span:nth-child(1){height:6px;animation-duration:.6s;animation-delay:0s}
-      .audio-eq span:nth-child(2){height:14px;animation-duration:.8s;animation-delay:.15s}
-      .audio-eq span:nth-child(3){height:9px;animation-duration:.5s;animation-delay:.05s}
-      .audio-eq span:nth-child(4){height:14px;animation-duration:.9s;animation-delay:.25s}
-      .audio-eq.paused span{animation-play-state:paused;height:3px!important;transition:height .3s ease}
-      @keyframes eqBar{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
-      .audio-np{display:flex;flex-direction:column;gap:1px}
-      .audio-np-label{font-family:var(--body);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);line-height:1}
-      .audio-np-title{font-family:var(--body);font-size:9px;color:var(--muted);white-space:nowrap;overflow:hidden;max-width:110px;text-overflow:ellipsis}
-      /* Lightbox */
-      #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:10000;align-items:center;justify-content:center}
-      #lightbox.open{display:flex}
-      #lightbox-img{max-width:90vw;max-height:90vh;border-radius:var(--r);object-fit:contain;border:3px solid var(--red)}
-      #lightbox-close{position:absolute;top:20px;right:20px;background:var(--red);border:none;color:#fff;font-size:20px;cursor:pointer;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
-      @media(max-width:400px){.cover-names{font-size:28px}.cover-heart-frame{width:170px;height:160px}.sec-title{font-size:24px}}
+      html {
+        scroll-behavior: smooth;
+        background: #111;
+      }
+      body {
+        max-width: 430px;
+        margin: 0 auto;
+        background: #000;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        overflow-x: hidden;
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* === CSS VARIABLES === */
+      :root {
+        --red: #d81f26;
+        --dark-card: #1a1a1a;
+        --dark-2: #252525;
+        --muted: #dadada;
+        --dim: #888;
+        --display: "Bebas Neue", sans-serif;
+        --body: "Inter", sans-serif;
+        --tight: "Inter Tight", sans-serif;
+        --r: 10px;
+      }
+
+      /* === UTILITY === */
+      .badge-red {
+        background: var(--red);
+        color: #fff;
+        padding: 0.2em 0.55em;
+        font-weight: 700;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+      .badge-2 {
+        background: #3c3c3c;
+        color: #fff;
+        padding: 0.15em 0.5em;
+        font-weight: 700;
+        border-radius: 10px;
+        font-size: 12px;
+      }
+      .px {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      /* === BUTTONS === */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--dark-2);
+        color: var(--muted);
+        border: none;
+        border-radius: var(--r);
+        padding: 0.8em 1.5em;
+        font-family: var(--body);
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          color 0.3s;
+        text-decoration: none;
+      }
+      .btn:hover,
+      .btn:focus {
+        background: var(--red);
+        color: #fff;
+      }
+      .btn-sm {
+        font-size: 10px;
+      }
+
+      /* === SCROLL REVEAL === */
+      .muncul {
+        transform: translateY(6rem) scale(0.93);
+        opacity: 0;
+        transition:
+          opacity 0.5s ease,
+          transform 1s ease;
+      }
+      .muncul.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .muncul-kiri {
+        transform: translateX(-100%) scale(0.93);
+        opacity: 0;
+        transition:
+          opacity 0.5s ease,
+          transform 1s ease;
+      }
+      .muncul-kiri.active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .muncul-kanan {
+        transform: translateX(100%) scale(0.93);
+        opacity: 0;
+        transition:
+          opacity 0.5s ease,
+          transform 1s ease;
+      }
+      .muncul-kanan.active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .zoom {
+        transform: scale(0.5);
+        opacity: 0;
+        transition:
+          opacity 0.5s ease,
+          transform 1.5s ease;
+      }
+      .zoom.active {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      /* === KIRI-KANAN ANIMATION (character mouth) === */
+      .kiri-kanan {
+        animation: kirikanan 2.5s linear infinite;
+      }
+      @keyframes kirikanan {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-20px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+      .kanan-kiri {
+        animation: kanankiri 2.5s linear infinite;
+      }
+      @keyframes kanankiri {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(20px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      /* === VIEW TRANSITIONS === */
+      @view-transition {
+        navigation: auto;
+      }
+      ::view-transition-group(root) {
+        animation-duration: 1.2s;
+      }
+      ::view-transition-old(root) {
+        animation-name: vt-out;
+      }
+      ::view-transition-new(root) {
+        animation-name: vt-in;
+      }
+      @keyframes vt-out {
+        to {
+          scale: 1.2;
+          opacity: 0;
+          filter: blur(5px);
+        }
+      }
+      @keyframes vt-in {
+        from {
+          scale: 1.2;
+          opacity: 0;
+          filter: blur(5px);
+        }
+      }
+
+      /* === SPLASH === */
+      #splash {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        transition: opacity 0.7s ease;
+      }
+      #splash.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .splash-presents {
+        font-family: var(--body);
+        font-size: 10px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+        animation: splashFade 2.4s ease forwards;
+      }
+      .splash-brand {
+        font-family: var(--display);
+        font-size: 46px;
+        letter-spacing: 8px;
+        color: #fff;
+        animation: splashBrand 2.6s ease forwards;
+        line-height: 1;
+      }
+      .splash-brand span {
+        color: var(--red);
+      }
+      .splash-tagline {
+        font-family: var(--body);
+        font-size: 9px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.2);
+        animation: splashFade 2.4s 0.4s ease forwards;
+        opacity: 0;
+      }
+      .splash-line {
+        width: 0;
+        height: 1px;
+        background: var(--red);
+        animation: splashLine 2s 0.2s ease forwards;
+        box-shadow: 0 0 10px rgba(216, 31, 38, 0.8);
+      }
+      @keyframes splashFade {
+        0% {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        20% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes splashBrand {
+        0% {
+          opacity: 0;
+          letter-spacing: 3px;
+        }
+        20% {
+          opacity: 1;
+          letter-spacing: 8px;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          letter-spacing: 12px;
+        }
+      }
+      @keyframes splashLine {
+        0% {
+          width: 0;
+          opacity: 1;
+        }
+        50% {
+          width: 120px;
+          opacity: 1;
+        }
+        100% {
+          width: 120px;
+          opacity: 0;
+        }
+      }
+
+      /* === SCROLL PROGRESS === */
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0%;
+        background: var(--red);
+        z-index: 50000;
+        box-shadow:
+          0 0 10px rgba(216, 31, 38, 0.9),
+          0 0 4px rgba(216, 31, 38, 0.6);
+        transition: width 0.08s linear;
+        pointer-events: none;
+      }
+
+      /* === FILM GRAIN === */
+      #grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 250px 250px;
+      }
+
+      /* === SECTION COVER === */
+      #section-cover {
+        position: relative;
+        min-height: 100vh;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+        z-index: 999;
+        padding: 0 0 30px;
+      }
+      .cover-logo {
+        max-width: 25%;
+      }
+      .cover-subtitle {
+        font-family: var(--tight);
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+
+      /* Character pair */
+      .char-pair {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 90%;
+        max-width: 320px;
+      }
+      .char-card {
+        flex: 1;
+        min-height: 150px;
+        border-radius: var(--r);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+      }
+      .char-card.blue {
+        background: linear-gradient(180deg, #1870ed 0%, #0a5cd1 100%);
+      }
+      .char-card.pink {
+        background: linear-gradient(180deg, #ff237c 0%, #df075e 100%);
+      }
+      .char-card .char-eyes {
+        max-width: 107px;
+      }
+      .char-card .char-mouth {
+        max-width: 63px;
+      }
+      .char-card.blue .char-mouth {
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-bottom: 25px;
+      }
+      .char-card.pink .char-mouth {
+        align-self: flex-start;
+        margin-left: 15px;
+        margin-bottom: 25px;
+      }
+
+      /* Guest info */
+      .cover-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 5%;
+        text-align: center;
+      }
+      .cover-kepada {
+        font-size: 12px;
+        font-weight: 300;
+      }
+      #namatamu {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--red);
+        font-family: var(--tight);
+      }
+      .cover-note {
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      /* === NETFLIX LOGO (text-based since SVG file gone) === */
+      .netflix-logo-text {
+        font-family: var(--display);
+        font-size: 22px;
+        letter-spacing: 3px;
+        color: var(--red);
+        line-height: 1;
+        border-left: 4px solid var(--red);
+        padding-left: 8px;
+        display: inline-block;
+      }
+      .netflix-logo-sub {
+        font-family: var(--body);
+        font-size: 8px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 2px;
+      }
+
+      /* === OPENING HERO === */
+      #opening {
+        background: #000;
+        padding-bottom: 25px;
+        overflow: hidden;
+      }
+      .opening-hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--r);
+        padding: 5%;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 0;
+      }
+      .opening-hero-slideshow {
+        position: relative;
+        height: 480px;
+        overflow: hidden;
+        border-radius: var(--r);
+        margin-bottom: 0;
+      }
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center top;
+        transition: opacity 1.25s ease;
+      }
+      .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+      .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0) 55%,
+          rgba(0, 0, 0, 0.7) 80%,
+          #000 100%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+      .opening-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 5%;
+        margin-top: -60px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .opening-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .opening-title {
+        font-family: var(--display);
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .opening-date {
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .opening-desc {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+      .opening-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 5px;
+      }
+      .opening-video {
+        margin: 0 5%;
+        border-radius: var(--r);
+        overflow: hidden;
+      }
+      .opening-video iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border: none;
+        display: block;
+        border-radius: var(--r);
+      }
+
+      /* === SECTION TITLE NETFLIX STYLE === */
+      .sec-title {
+        font-family: var(--display);
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding-left: 14px;
+      }
+      .sec-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        bottom: 10%;
+        width: 4px;
+        background: var(--red);
+        border-radius: 2px;
+        box-shadow: 0 0 8px rgba(216, 31, 38, 0.6);
+      }
+      .sec-title-sm {
+        font-family: var(--display);
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 14px;
+      }
+      .sec-title-sm::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        bottom: 10%;
+        width: 4px;
+        background: var(--red);
+        border-radius: 2px;
+        box-shadow: 0 0 8px rgba(216, 31, 38, 0.6);
+      }
+
+      /* === SECTION ROW LABEL === */
+      .section-row-label {
+        font-family: var(--body);
+        font-size: 9px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: -10px;
+      }
+
+      /* === COUPLE === */
+      #couple {
+        background: #000;
+        padding: 25px 5% 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        overflow: hidden;
+      }
+      .quran-verse {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--muted);
+        font-style: italic;
+      }
+      .quran-ref {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 5px;
+      }
+      .couple-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        overflow: hidden;
+      }
+      .couple-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .couple-card img {
+        width: 100%;
+        border-radius: var(--r);
+        object-fit: cover;
+        object-position: top center;
+        aspect-ratio: 3/4;
+      }
+      .couple-name {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .couple-parent {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--dim);
+      }
+
+      /* Save the Date card */
+      .std-card {
+        position: relative;
+        min-height: 350px;
+        border-radius: var(--r);
+        overflow: hidden;
+        box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
+      }
+      .std-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 1.25s ease;
+      }
+      .std-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        transition: background 0.3s;
+      }
+      .std-card:hover .std-overlay {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .std-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 350px;
+        padding: 20px;
+      }
+      .std-box {
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        padding: 25px;
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+      }
+      .std-title {
+        font-family: var(--display);
+        font-size: 40px;
+        letter-spacing: 0.5px;
+      }
+      .std-divider {
+        border-top: 1px solid #fff;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 14px;
+      }
+      .std-desc {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      /* Countdown */
+      .countdown-items {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px -5px;
+      }
+      .countdown-item {
+        flex: 1;
+        padding: 0 5px;
+      }
+      .countdown-cell {
+        padding: 10px 5px 15px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        background: rgba(0, 0, 0, 0.48);
+        text-align: center;
+      }
+      .cd-digit {
+        display: block;
+        font-family: var(--display);
+        font-size: 20px;
+        line-height: 1.3;
+      }
+      .cd-label {
+        display: block;
+        font-family: var(--body);
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      /* === DATE SECTION === */
+      #date {
+        background: #000;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+      }
+      .event-row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+        overflow: hidden;
+      }
+      .event-img {
+        width: 45%;
+        flex-shrink: 0;
+        height: 175px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 15px;
+      }
+      .event-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+      }
+      .event-info p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      /* === LOVE STORY === */
+      #lovestory {
+        background: #000;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: visible;
+      }
+      .timeline {
+        position: relative;
+        margin-top: 25px;
+        overflow: visible;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--dark-2);
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+      .tl-item {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+        overflow: visible;
+      }
+      .tl-item.left .tl-content {
+        margin-right: calc(50% + 26px);
+        text-align: right;
+      }
+      .tl-item.right .tl-content {
+        margin-left: calc(50% + 26px);
+        text-align: left;
+      }
+      .tl-icon {
+        position: absolute;
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 32px;
+        background: var(--red);
+        border-radius: 50%;
+        border: 4px solid var(--dark-2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #fff;
+        z-index: 2;
+      }
+      .tl-content {
+        background: var(--dark-2);
+        padding: 12px 14px;
+        border-radius: var(--r);
+        flex: 1;
+        min-width: 0;
+      }
+      .tl-title {
+        font-family: var(--display);
+        font-size: 18px;
+        color: var(--red);
+        display: block;
+      }
+      .tl-ep {
+        font-family: var(--body);
+        font-size: 8px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.25);
+        display: block;
+        margin-bottom: 3px;
+      }
+      .tl-date {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-top: 8px;
+        display: block;
+      }
+      .tl-excerpt {
+        font-size: 11px;
+        line-height: 1.5;
+        color: var(--dim);
+        margin-top: 15px;
+      }
+
+      /* === GALLERY === */
+      #gallery {
+        background: #000;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--r);
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .gallery-item.tall {
+        aspect-ratio: 9/16;
+      }
+      .gallery-item.wide {
+        grid-column: 1/-1;
+        aspect-ratio: 16/9;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+      .gallery-item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 45%;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+        pointer-events: none;
+        z-index: 1;
+        border-radius: 0 0 var(--r) var(--r);
+      }
+      .gallery-item:hover {
+        transform: scale(1.02);
+        box-shadow:
+          0 0 0 2px var(--red),
+          0 8px 25px rgba(216, 31, 38, 0.3);
+        z-index: 2;
+      }
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: transparent;
+        transition: background 0.8s ease;
+      }
+      .gallery-item:hover .gallery-overlay {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      /* === GIFT === */
+      #gift {
+        background: #000;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+      }
+      .gift-intro {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .gift-addr {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .gift-addr-icon {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        background: var(--red);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #fff;
+      }
+      .gift-addr-title {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .gift-addr-desc {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--muted);
+      }
+      .bank-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+      }
+      .bank-card {
+        background: var(--dark-2);
+        border-radius: var(--r);
+        padding: 5%;
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+      }
+      .bank-card img {
+        max-width: 35%;
+        margin: 0 auto 8px;
+        filter: brightness(0) invert(1);
+      }
+      .bank-acct-name {
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+        color: var(--muted);
+      }
+      .bank-acct-num {
+        font-family: var(--display);
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+      .copy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--red);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+        font-family: var(--body);
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .copy-btn:hover {
+        background: #54595f;
+      }
+
+      /* === WISH / RSVP === */
+      #wish {
+        background: #000;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+      }
+      .rsvp-card {
+        background: var(--dark-2);
+        border-radius: var(--r);
+        padding: 20px;
+        overflow: hidden;
+      }
+      .rsvp-header {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #444;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+      .rsvp-counts {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+      .rsvp-count {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+      .rsvp-count.hadir {
+        background: #3d9a62;
+      }
+      .rsvp-count.tidak {
+        background: var(--red);
+      }
+      .rsvp-form input,
+      .rsvp-form textarea,
+      .rsvp-form select {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        padding: 10px 12px;
+        color: #fff;
+        font-family: var(--body);
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        outline: none;
+      }
+      .rsvp-form input::placeholder,
+      .rsvp-form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .rsvp-form textarea {
+        resize: none;
+        min-height: 70px;
+      }
+      .rsvp-form select option {
+        background: #333;
+      }
+      .rsvp-confirm {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .confirm-btn {
+        flex: 1;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: var(--body);
+        font-size: 12px;
+        font-weight: 600;
+        background: #444;
+        color: #fff;
+        transition: background 0.3s;
+      }
+      .confirm-btn.yes {
+        background: #3d9a62;
+      }
+      .confirm-btn.no {
+        background: var(--red);
+      }
+      .rsvp-submit {
+        width: 100%;
+        background: var(--red);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        font-family: var(--body);
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .rsvp-submit:hover {
+        background: #b01920;
+      }
+      .wishes-box {
+        margin-top: 15px;
+        max-height: 30vh;
+        overflow-y: auto;
+        scrollbar-width: none;
+      }
+      .wishes-box::-webkit-scrollbar {
+        display: none;
+      }
+      .wish-item {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .wish-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+      }
+      .wish-avatar {
+        width: 28px;
+        height: 28px;
+        background: #777;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+      .wish-name {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .wish-text {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+        padding-left: 36px;
+      }
+
+      /* === CLOSING === */
+      #closing {
+        background: #000;
+        padding-bottom: 25px;
+        overflow: hidden;
+      }
+      .closing-inner {
+        position: relative;
+        border-radius: var(--r);
+        overflow: hidden;
+        padding: 15% 5% 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background: linear-gradient(180deg, #111 0%, #000 100%);
+      }
+      .closing-inner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 50%,
+          rgba(216, 31, 38, 0.12) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .closing-inner > * {
+        position: relative;
+        z-index: 1;
+      }
+      .closing-names {
+        font-family: var(--display);
+        font-size: 40px;
+      }
+      .family-row {
+        display: flex;
+        gap: 20px;
+      }
+      .family-col {
+        flex: 1;
+      }
+      .family-label {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .family-desc {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .family-names {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      .footer-credit {
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .footer-credit a {
+        color: var(--red);
+      }
+
+      /* === AUDIO PLAYER === */
+      #audio-btn {
+        position: fixed;
+        bottom: 20px;
+        right: max(20px, calc((100vw - 430px) / 2 + 20px));
+        z-index: 9999;
+        width: auto !important;
+        height: auto !important;
+        border-radius: 30px !important;
+        padding: 9px 16px 9px 12px !important;
+        background: var(--dark-2);
+        border: none;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s;
+      }
+      #audio-btn:hover {
+        transform: scale(1.1);
+      }
+      .audio-eq {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        height: 16px;
+      }
+      .audio-eq span {
+        display: block;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--red);
+        transform-origin: bottom;
+        animation: eqBar 0.7s ease-in-out infinite alternate;
+      }
+      .audio-eq span:nth-child(1) {
+        height: 6px;
+        animation-duration: 0.6s;
+        animation-delay: 0s;
+      }
+      .audio-eq span:nth-child(2) {
+        height: 14px;
+        animation-duration: 0.8s;
+        animation-delay: 0.15s;
+      }
+      .audio-eq span:nth-child(3) {
+        height: 9px;
+        animation-duration: 0.5s;
+        animation-delay: 0.05s;
+      }
+      .audio-eq span:nth-child(4) {
+        height: 14px;
+        animation-duration: 0.9s;
+        animation-delay: 0.25s;
+      }
+      .audio-eq.paused span {
+        animation-play-state: paused;
+        height: 3px !important;
+        transition: height 0.3s ease;
+      }
+      @keyframes eqBar {
+        from {
+          transform: scaleY(0.25);
+        }
+        to {
+          transform: scaleY(1);
+        }
+      }
+      .audio-np {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .audio-np-label {
+        font-family: var(--body);
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--red);
+        line-height: 1;
+      }
+      .audio-np-title {
+        font-family: var(--body);
+        font-size: 9px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 110px;
+        text-overflow: ellipsis;
+      }
+
+      /* === LIGHTBOX === */
+      #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+      }
+      #lightbox.open {
+        display: flex;
+      }
+      #lightbox-img {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: var(--r);
+        object-fit: contain;
+      }
+      #lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        cursor: pointer;
+      }
+
+      /* === SIRKULASI BADGE === */
+      .sirk-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.04);
+        font-family: var(--body);
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .sirk-badge::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: var(--red);
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: 0 0 6px rgba(216, 31, 38, 0.8);
+      }
+      .sirk-badge:hover {
+        background: rgba(216, 31, 38, 0.12);
+        border-color: rgba(216, 31, 38, 0.35);
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      /* === RESPONSIVE === */
+      @media (max-width: 400px) {
+        .opening-hero-slideshow {
+          height: 280px;
+        }
+        .sec-title {
+          font-size: 32px;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- Scroll Progress -->
     <div id="scroll-progress"></div>
+    <!-- Film Grain -->
+    <div id="grain"></div>
 
-    <!-- SPLASH -->
+    <!-- ═══ SPLASH ═══ -->
     <div id="splash">
-      <svg class="splash-bow" viewBox="0 0 100 60" fill="none">
-        <ellipse cx="28" cy="30" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 30)"/>
-        <ellipse cx="72" cy="30" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 30)"/>
-        <ellipse cx="28" cy="30" rx="14" ry="9" fill="#e8304a" transform="rotate(-15 28 30)"/>
-        <ellipse cx="72" cy="30" rx="14" ry="9" fill="#e8304a" transform="rotate(15 72 30)"/>
-        <circle cx="50" cy="30" r="10" fill="#c8102e"/>
-        <circle cx="50" cy="30" r="6" fill="#e8304a"/>
-        <line x1="50" y1="30" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-        <line x1="50" y1="58" x2="40" y2="68" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="50" y1="58" x2="60" y2="68" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      <p class="splash-sub">Undangan Pernikahan</p>
+      <p class="splash-presents">sirkulasi presents</p>
       <div class="splash-line"></div>
-      <p class="splash-title">Daniel &amp; Nadine</p>
+      <p class="splash-brand">THE<span>WED</span>DING</p>
+      <p class="splash-tagline">Nadine &amp; Daniel · 23.08.2026</p>
     </div>
 
-    <!-- COVER -->
+    <!-- ═══ SECTION COVER ═══ -->
     <section id="section-cover">
-      <div class="cover-border-left"></div>
-      <div class="cover-border-right"></div>
-      <div class="cover-top-row">
-        <svg width="56" height="56" viewBox="0 0 100 70" fill="none">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/>
-          <circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          <line x1="50" y1="32" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="38" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="62" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <svg width="56" height="56" viewBox="0 0 100 70" fill="none" style="transform:scaleX(-1)">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/>
-          <circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          <line x1="50" y1="32" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="38" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="62" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
+      <!-- Netflix-style branding -->
+      <div style="text-align: center">
+        <div class="netflix-logo-text">THE WEDDING</div>
+        <div class="netflix-logo-sub">of Nadine &amp; Daniel</div>
       </div>
-      <div class="wavy-top"></div>
-      <div class="cover-center">
-        <p class="cover-invite-text">Invite you to our wedding</p>
-        <h1 class="cover-names">Daniel &amp; Nadine</h1>
-        <div class="cover-heart-frame">
-          <svg viewBox="0 0 200 190" fill="none">
-            <circle cx="100" cy="95" r="90" fill="#fff" stroke="#c8102e" stroke-width="2.5" stroke-dasharray="8 5"/>
-            <path d="M100,155 C60,130 20,105 20,70 C20,45 40,28 65,35 C80,38 95,50 100,58 C105,50 120,38 135,35 C160,28 180,45 180,70 C180,105 140,130 100,155Z" fill="#ffeef0" stroke="#c8102e" stroke-width="3"/>
-            <path d="M100,145 C65,122 30,100 30,70 C30,50 47,36 68,42 C82,46 96,56 100,64 C104,56 118,46 132,42 C153,36 170,50 170,70 C170,100 135,122 100,145Z" fill="#fff0f2" opacity="0.6"/>
-          </svg>
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg" alt="Daniel dan Nadine" />
-          <div class="mini-hearts">
-            <span>&#9829;</span><span>&#9829;</span><span>&#9829;</span>
-            <span>&#9829;</span><span>&#9829;</span><span>&#9829;</span>
+
+      <p class="cover-subtitle"><i>of</i> <b>Nadine &amp; Daniel</b></p>
+
+      <!-- Character cards (animated) -->
+      <div class="char-pair">
+        <!-- Groom — blue -->
+        <div class="char-card blue">
+          <div style="font-size: 42px; margin-top: 8px">👨</div>
+          <div
+            style="
+              font-family: var(--display);
+              font-size: 16px;
+              color: #fff;
+              letter-spacing: 1px;
+              margin-bottom: 4px;
+            "
+          >
+            Daniel
           </div>
+          <div
+            style="
+              width: 50px;
+              height: 12px;
+              background: rgba(255, 255, 255, 0.3);
+              border-radius: 10px;
+              margin-bottom: 16px;
+            "
+            class="kiri-kanan"
+          ></div>
         </div>
-        <p class="cover-date">23 . 08 . 2026</p>
-        <div class="cover-kepada-block muncul">
-          <p class="cover-kepada">Kepada Yth. Bapak/Ibu/Saudara/i :</p>
-          <p id="namatamu">Tamu Undangan</p>
-          <p class="cover-note">*) Mohon maaf apabila ada kesalahan penulisan nama/gelar</p>
+        <!-- Bride — pink -->
+        <div class="char-card pink">
+          <div style="font-size: 42px; margin-top: 8px">👩</div>
+          <div
+            style="
+              font-family: var(--display);
+              font-size: 16px;
+              color: #fff;
+              letter-spacing: 1px;
+              margin-bottom: 4px;
+            "
+          >
+            Nadine
+          </div>
+          <div
+            style="
+              width: 50px;
+              height: 12px;
+              background: rgba(255, 255, 255, 0.3);
+              border-radius: 10px;
+              margin-bottom: 16px;
+            "
+            class="kanan-kiri"
+          ></div>
         </div>
+      </div>
+
+      <!-- Guest info -->
+      <div class="cover-info">
+        <p class="cover-kepada">Kepada Yth: Bpk/Ibu/Saudara/i</p>
+        <p id="namatamu">Tamu Undangan</p>
+        <p class="cover-note">
+          *) Mohon maaf apabila ada kesalahan penulisan nama/gelar
+        </p>
         <div id="tombol-buka">
-          <a class="btn-open" href="#opening">
+          <a class="btn" href="#opening">
             <i class="far fa-envelope-open"></i> Buka Undangan
           </a>
         </div>
-      </div>
-      <div class="wavy-bot"></div>
-      <div class="cover-bottom-row">
-        <svg width="56" height="56" viewBox="0 0 100 70" fill="none" style="transform:scaleY(-1)">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/>
-          <circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          <line x1="50" y1="32" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="38" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="62" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-        <svg width="56" height="56" viewBox="0 0 100 70" fill="none" style="transform:scale(-1,-1)">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/>
-          <circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          <line x1="50" y1="32" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="38" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="62" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
+        <a
+          class="sirk-badge"
+          href="https://www.sirkulasi.my.id/"
+          target="_blank"
+          rel="noopener"
+          >Platform by Sirkulasi</a
+        >
       </div>
     </section>
 
-    <!-- OPENING -->
+    <!-- ═══ SECTION OPENING ═══ -->
     <section id="opening">
-      <div class="opening-hero">
-        <p class="opening-bismillah muncul">Bismillahirrahmanirrahim</p>
-        <img class="opening-hero-photo muncul" src="assets/img/new/PHOTO-2026-06-29-13-23-36.jpg" alt="Daniel dan Nadine kecil" />
-        <p class="opening-quran muncul">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."</p>
-        <p class="opening-quran-ref muncul">— Q.S. Ar-Rum: 21</p>
-        <p class="opening-invite-text muncul">Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir dan memberikan doa restu pada acara pernikahan kami.</p>
-        <nav class="opening-nav muncul">
-          <a class="btn" href="#couple">Mempelai</a>
-          <a class="btn" href="#date">Tanggal &amp; Lokasi</a>
-          <a class="btn" href="#gallery">Galeri</a>
-          <a class="btn" href="#wish">Ucapan &amp; RSVP</a>
-        </nav>
-      </div>
-      <div style="margin:12px;border-radius:var(--r);overflow:hidden;border:2px solid var(--border);" class="muncul">
-        <iframe src="https://www.youtube-nocookie.com/embed/aYbUY6JGpbM?mute=1&controls=1&rel=0" title="Wedding Video" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
-      </div>
-    </section>
-
-    <!-- COUPLE -->
-    <section id="couple" class="section-wrap">
-      <div style="display:flex;justify-content:center;margin-bottom:16px;">
-        <svg width="56" height="44" viewBox="0 0 100 70" fill="none">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          <line x1="50" y1="32" x2="50" y2="58" stroke="#c8102e" stroke-width="3" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="38" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="50" y1="58" x2="62" y2="70" stroke="#c8102e" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h2 class="sec-title" style="flex-shrink:0;">Mempelai</h2>
-        <div class="sec-divider-line"></div>
-      </div>
-      <p class="couple-intro">Dengan segala kerendahan hati, kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk turut berbahagia bersama kami.</p>
-
-      <div class="person-card muncul-kiri">
-        <svg width="44" height="34" viewBox="0 0 100 70" fill="none" style="margin-bottom:-8px;">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-        </svg>
-        <div class="person-photo-wrap">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg" alt="Daniel Dwi Prajitno" />
+      <!-- Hero single image -->
+      <div class="opening-hero-slideshow">
+        <div class="hero-slide" style="opacity: 1">
+          <img
+            src="assets/img/hero_banner.jpg"
+            alt="Daniel dan Nadine Wedding"
+          />
         </div>
-        <p class="person-name">Daniel</p>
-        <p class="person-fullname">Daniel Dwi Prajitno</p>
-        <p class="person-parent">Putra Bapak Alm. Andreas Edhi Prajitno<br>dan Ibu Yvone Laura Bokings</p>
-        <a class="btn" href="https://instagram.com/daniel" target="_blank" rel="nofollow noopener" style="margin-top:4px;"><i class="fab fa-instagram"></i> @daniel</a>
+        <div class="hero-gradient"></div>
       </div>
 
-      <p class="dengan-text"><span class="float-heart">&#9829;</span> dengan <span class="float-heart">&#9829;</span></p>
-
-      <div class="person-card muncul-kanan">
-        <svg width="44" height="34" viewBox="0 0 100 70" fill="none" style="margin-bottom:-8px;">
-          <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-          <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-          <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-          <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-        </svg>
-        <div class="person-photo-wrap">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52 3.jpg" alt="Nadine Ersabilla Oktavia" />
-        </div>
-        <p class="person-name">Nadine</p>
-        <p class="person-fullname">Nadine Ersabilla Oktavia</p>
-        <p class="person-parent">Putri Bapak Alm. Isman Yadi<br>dan Ibu Sulas Sa'iyah</p>
-        <a class="btn" href="https://instagram.com/nadine" target="_blank" rel="nofollow noopener" style="margin-top:4px;"><i class="fab fa-instagram"></i> @nadine</a>
-      </div>
-
-      <div class="muncul" style="background:var(--red);border-radius:var(--r);padding:18px;text-align:center;margin-top:8px;color:#fff;">
-        <p style="font-family:var(--script);font-size:22px;margin-bottom:6px;font-weight:700;">Save The Date</p>
-        <p style="font-size:20px;font-weight:700;letter-spacing:2px;">23 Agustus 2026</p>
-        <p style="font-size:12px;margin-top:4px;opacity:.85;">Minggu &bull; Hotel Edotel Sidoarjo</p>
-        <button class="btn" style="background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.4);color:#fff;margin-top:12px;" onclick="addToCalendar()"><i class="far fa-calendar-alt"></i> Simpan ke Kalender</button>
-      </div>
-    </section>
-
-    <!-- DATE -->
-    <section id="date" class="section-wrap cream">
-      <div class="wavy-top" style="margin:0 -22px 20px;"></div>
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h3 class="sec-title" style="flex-shrink:0;">Hari Pernikahan</h3>
-        <div class="sec-divider-line"></div>
-      </div>
-      <p class="sec-subtitle">Yang akan diselenggarakan pada:</p>
-      <div class="countdown-wrap muncul" style="margin-top:16px;">
-        <p class="countdown-label">Menuju Hari Bahagia &#10024;</p>
-        <ul class="countdown-items">
-          <li class="countdown-item"><div class="countdown-cell"><span class="cd-digit" id="cd-d">00</span><span class="cd-label">Hari</span></div></li>
-          <li class="countdown-item"><div class="countdown-cell"><span class="cd-digit" id="cd-h">00</span><span class="cd-label">Jam</span></div></li>
-          <li class="countdown-item"><div class="countdown-cell"><span class="cd-digit" id="cd-m">00</span><span class="cd-label">Menit</span></div></li>
-          <li class="countdown-item"><div class="countdown-cell"><span class="cd-digit" id="cd-s">00</span><span class="cd-label">Detik</span></div></li>
-        </ul>
-      </div>
-      <div class="event-card muncul">
-        <div class="event-card-header"><i class="fas fa-heart"></i> Resepsi Pernikahan</div>
-        <div class="event-card-body">
-          <img class="event-card-img" src="assets/img/new/PHOTO-2026-06-29-13-22-52.jpg" alt="Resepsi" />
-          <div class="event-card-info">
-            <div class="event-detail-row"><i class="far fa-calendar-alt"></i><span><b>Minggu, 23 Agustus 2026</b></span></div>
-            <div class="event-detail-row"><i class="far fa-clock"></i><span>Pukul 09.30 &ndash; 13.00 WIB</span></div>
-            <div class="event-detail-row"><i class="fas fa-map-marker-alt"></i><span><b>Hotel Edotel (SMKN 1 BUDURAN)</b><br>Jl. Jenggolo No.1B, Bedrek, Siwalanpanji,<br>Kec. Buduran, Kab. Sidoarjo</span></div>
+      <div class="opening-content">
+        <div class="opening-logo-wrap">
+          <div class="netflix-logo-text" style="font-size: 16px">
+            THE WEDDING
           </div>
         </div>
-        <div class="event-card-actions">
-          <a class="btn btn-red" href="https://maps.google.com/?q=Hotel+Edotel+SMKN+1+Buduran+Sidoarjo" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Kunjungi Lokasi</a>
-        </div>
+        <h2 class="opening-title muncul-kiri">Nadine &amp; Daniel</h2>
+        <p class="opening-date muncul-kiri">
+          <span class="badge-red">Coming Soon</span> Minggu, 23 Agustus 2026
+        </p>
+        <p class="opening-desc muncul-kiri">
+          Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan
+          hadir dan memberikan doa restu pada acara pernikahan kami.
+        </p>
+        <nav class="opening-nav muncul-kiri">
+          <a class="btn btn-sm" href="#couple">Mempelai</a>
+          <a class="btn btn-sm" href="#date">Tanggal &amp; Lokasi</a>
+          <a class="btn btn-sm" href="#gallery">Gallery</a>
+          <a class="btn btn-sm" href="#gift">Gift</a>
+          <a class="btn btn-sm" href="#wish">Wishes &amp; RSVP</a>
+        </nav>
+        <a
+          class="sirk-badge muncul-kiri"
+          href="https://www.sirkulasi.my.id/"
+          target="_blank"
+          rel="noopener"
+          >Dibuat oleh Sirkulasi</a
+        >
       </div>
-      <div class="wavy-bot" style="margin:20px -22px 0;"></div>
     </section>
 
-    <!-- LOVE STORY -->
-    <section id="lovestory" class="section-wrap">
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h3 class="sec-title" style="flex-shrink:0;">Love Story</h3>
-        <div class="sec-divider-line"></div>
+    <!-- ═══ SECTION COUPLE ═══ -->
+    <section id="couple">
+      <p class="quran-verse px">
+        "Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan
+        hidup dari jenismu sendiri supaya kamu dapat ketenangan hati dan
+        dijadikannya kasih sayang di antara kamu."
+      </p>
+      <p class="quran-ref px">
+        <span class="badge-red">Qur'an Surah</span> Ar-Rum: 21
+      </p>
+
+      <h3 class="sec-title muncul-kiri">Bride &amp; Groom</h3>
+
+      <div class="couple-grid">
+        <!-- Groom -->
+        <div class="couple-card muncul-kiri">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg"
+            alt="Daniel Dwi Prajitno"
+          />
+          <p class="couple-name">
+            <span class="badge-red"><i>Daniel</i></span>
+          </p>
+          <p
+            style="
+              font-size: 13px;
+              font-weight: 400;
+              color: var(--muted);
+              margin-bottom: 2px;
+            "
+          >
+            Daniel Dwi Prajitno
+          </p>
+          <p class="couple-parent">
+            Putra Bapak Alm. Andreas Edhi Prajitno<br />&amp; Ibu Yvone Laura
+            Bokings
+          </p>
+          <a
+            class="btn btn-sm"
+            href="https://instagram.com/daniel"
+            target="_blank"
+            rel="nofollow noopener"
+            style="margin-top: 5px"
+          >
+            <i class="fab fa-instagram"></i> @daniel
+          </a>
+        </div>
+        <!-- Bride -->
+        <div class="couple-card muncul-kanan">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-52 3.jpg"
+            alt="Nadine Ersabilla Oktavia"
+          />
+          <p class="couple-name">
+            <span class="badge-red"><i>Nadine</i></span>
+          </p>
+          <p
+            style="
+              font-size: 13px;
+              font-weight: 400;
+              color: var(--muted);
+              margin-bottom: 2px;
+            "
+          >
+            Nadine Ersabilla Oktavia
+          </p>
+          <p class="couple-parent">
+            Putri Bapak Alm. Isman Yadi<br />&amp; Ibu Sulas Sa'iyah
+          </p>
+          <a
+            class="btn btn-sm"
+            href="https://instagram.com/nadine"
+            target="_blank"
+            rel="nofollow noopener"
+            style="margin-top: 5px"
+          >
+            <i class="fab fa-instagram"></i> @nadine
+          </a>
+        </div>
       </div>
-      <div class="timeline">
+
+      <!-- Save The Date card (slideshow bg) -->
+      <div class="std-card muncul">
+        <div
+          class="std-bg"
+          id="std-bg1"
+          style="
+            background-image: url(&quot;assets/img/new/PHOTO-2026-06-29-13-22-52.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="std-bg"
+          id="std-bg2"
+          style="
+            background-image: url(&quot;assets/img/new/PHOTO-2026-06-29-13-22-53.jpg&quot;);
+            opacity: 0;
+          "
+        ></div>
+        <div class="std-overlay"></div>
+        <div class="std-content">
+          <div class="std-box zoom">
+            <h3 class="std-title">Save The Date</h3>
+            <div class="std-divider">
+              <span class="badge-red">Minggu,</span> 23 Agustus 2026
+            </div>
+            <p class="std-desc">
+              Kami akan menikah, dan kami ingin Anda menjadi bagian dari hari
+              istimewa kami.
+            </p>
+            <ul class="countdown-items">
+              <li class="countdown-item">
+                <div class="countdown-cell">
+                  <span class="cd-digit" id="cd-d">00</span
+                  ><span class="cd-label">Hari</span>
+                </div>
+              </li>
+              <li class="countdown-item">
+                <div class="countdown-cell">
+                  <span class="cd-digit" id="cd-h">00</span
+                  ><span class="cd-label">Jam</span>
+                </div>
+              </li>
+              <li class="countdown-item">
+                <div class="countdown-cell">
+                  <span class="cd-digit" id="cd-m">00</span
+                  ><span class="cd-label">Menit</span>
+                </div>
+              </li>
+              <li class="countdown-item">
+                <div class="countdown-cell">
+                  <span class="cd-digit" id="cd-s">00</span
+                  ><span class="cd-label">Detik</span>
+                </div>
+              </li>
+            </ul>
+            <button
+              class="btn"
+              style="margin-top: 5px"
+              onclick="addToCalendar()"
+            >
+              <i class="far fa-calendar-alt"></i> Simpan Ke Kalender
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION DATE ═══ -->
+    <section id="date">
+      <h3 class="sec-title muncul-kiri px">HARI PERNIKAHAN</h3>
+      <p
+        class="px"
+        style="
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 1.5;
+          color: var(--muted);
+        "
+      >
+        Yang akan dilaksanakan pada:
+      </p>
+
+      <!-- Resepsi -->
+      <div class="event-row px">
+        <img
+          class="event-img zoom"
+          src="assets/img/new/PHOTO-2026-06-29-13-22-52.jpg"
+          alt="Resepsi Pernikahan"
+        />
+        <div class="event-info muncul-kanan">
+          <p><span class="badge-red">Acara:</span> Resepsi Pernikahan</p>
+          <p>Minggu, 23 Agustus 2026</p>
+          <p>
+            Pukul: <span class="badge-2">09.30 – 13.00</span>
+            <span class="badge-2">WIB</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="px" style="font-size: 14px; line-height: 1.5">
+        <b>Hotel Edotel (SMKN 1 BUDURAN)</b>:<br />
+        Jl. Jenggolo No.1B, Bedrek, Siwalanpanji,<br />
+        Kec. Buduran, Kabupaten Sidoarjo
+      </p>
+      <div class="px" style="display: flex; gap: 10px; flex-wrap: wrap">
+        <a
+          class="btn btn-sm"
+          href="https://maps.google.com/?q=Hotel+Edotel+SMKN+1+Buduran+Sidoarjo"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fas fa-map-marker-alt"></i> Kunjungi Lokasi
+        </a>
+        <button class="btn btn-sm" onclick="addToCalendar()">
+          <i class="far fa-calendar-alt"></i> Simpan Kalender
+        </button>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION LOVE STORY ═══ -->
+    <section id="lovestory">
+      <p class="section-row-label px">Perjalanan Kami</p>
+      <h3 class="sec-title-sm muncul-kiri px">
+        <span class="badge-red">Our Love</span> Story
+      </h3>
+
+      <div class="timeline px">
         <div class="tl-item left">
           <div class="tl-icon zoom"><i class="fas fa-heart"></i></div>
           <div class="tl-content muncul-kiri">
-            <span class="tl-title">Awal Pertemuan</span>
-            <span class="tl-date">Sejak Masa Kecil</span>
-            <p class="tl-excerpt">Takdir mempertemukan dua jiwa sejak kecil, tidak ada yang tahu bahwa persahabatan ini akan berbuah cinta yang indah.</p>
+            <span class="tl-ep">Episode 01</span>
+            <span class="tl-title">Awal Bertemu</span>
+            <span class="tl-date">Sejak Kecil</span>
+            <p class="tl-excerpt">
+              Takdir mempertemukan dua jiwa kecil, tanpa tahu bahwa persahabatan
+              itu akan berbuah cinta yang indah.
+            </p>
           </div>
         </div>
         <div class="tl-item right">
-          <div class="tl-icon zoom"><i class="fas fa-ring"></i></div>
+          <div class="tl-icon zoom"><i class="fas fa-heart"></i></div>
           <div class="tl-content muncul-kanan">
+            <span class="tl-ep">Episode 02</span>
             <span class="tl-title">Jatuh Cinta</span>
-            <span class="tl-date">Bersama Menjelajah Dunia</span>
-            <p class="tl-excerpt">Setiap momen bersama mengukir kenangan yang tak terlupakan, tawa dan senyum menjadi bahasa cinta kami.</p>
+            <span class="tl-date">Bersama Bertumbuh</span>
+            <p class="tl-excerpt">
+              Setiap momen bersama mengukir kenangan indah, tawa dan senyum
+              menjadi bahasa cinta kami.
+            </p>
           </div>
         </div>
         <div class="tl-item left">
-          <div class="tl-icon zoom"><i class="fas fa-heart"></i></div>
+          <div class="tl-icon zoom"><i class="fas fa-ring"></i></div>
           <div class="tl-content muncul-kiri">
+            <span class="tl-ep">Episode 03</span>
             <span class="tl-title">Lamaran</span>
             <span class="tl-date">Menuju Pelaminan</span>
-            <p class="tl-excerpt">Dengan doa dan restu orang tua, Daniel dengan penuh cinta melamar Nadine untuk menapaki hidup bersama.</p>
+            <p class="tl-excerpt">
+              Dengan doa dan restu orang tua, Daniel dengan penuh cinta melamar
+              Nadine untuk bersama selamanya.
+            </p>
           </div>
         </div>
         <div class="tl-item right">
           <div class="tl-icon zoom"><i class="fas fa-church"></i></div>
           <div class="tl-content muncul-kanan">
+            <span class="tl-ep">Season Finale</span>
             <span class="tl-title">Hari Pernikahan</span>
             <span class="tl-date">23 Agustus 2026</span>
-            <p class="tl-excerpt">Kami resmi menjadi satu dalam ikatan suci pernikahan. Selamat datang di cerita baru kami. &#128141;</p>
+            <p class="tl-excerpt">
+              Babak baru dimulai. Dua hati, satu ikatan, satu cerita abadi. ❤️
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section-wrap cream">
-      <div class="wavy-top" style="margin:0 -22px 20px;"></div>
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h3 class="sec-title" style="flex-shrink:0;">Galeri</h3>
-        <div class="sec-divider-line"></div>
-      </div>
-      <p class="sec-subtitle" style="margin-bottom:16px;">Momen-momen indah kami</p>
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg" alt="Daniel dan Nadine" loading="lazy" />
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52 3.jpg" alt="Daniel dan Nadine" loading="lazy" />
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-52.jpg" alt="Daniel dan Nadine" loading="lazy" />
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-22-53.jpg" alt="Daniel dan Nadine" loading="lazy" />
-          <div class="gallery-overlay"></div>
-        </div>
+    <!-- ═══ SECTION GALLERY ═══ -->
+    <section id="gallery">
+      <p class="section-row-label px">Foto Bersama</p>
+      <h3 class="sec-title muncul-kiri px">WEDDING GALLERY</h3>
+
+      <div class="gallery-grid px">
+        <!-- Wide featured -->
         <div class="gallery-item wide" onclick="openLightbox(this)">
-          <img src="assets/img/new/PHOTO-2026-06-29-13-23-36.jpg" alt="Daniel dan Nadine kecil" loading="lazy" />
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-23-36.jpg"
+            alt="Daniel dan Nadine kecil"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <!-- 2 tall -->
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-52 3.jpg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-52.jpg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/new/PHOTO-2026-06-29-13-22-53.jpg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
           <div class="gallery-overlay"></div>
         </div>
       </div>
-      <div class="wavy-bot" style="margin:20px -22px 0;"></div>
     </section>
 
-    <!-- GIFT -->
-    <section id="gift" class="section-wrap">
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h3 class="sec-title" style="flex-shrink:0;">Wedding Gift</h3>
-        <div class="sec-divider-line"></div>
-      </div>
-      <p class="gift-intro">Kehadiran dan doa restu Anda merupakan karunia terbesar bagi kami. Namun jika ingin memberi hadiah, kami dengan senang hati menerimanya.</p>
-      <div class="gift-addr muncul-kanan">
-        <div class="gift-addr-icon"><i class="fas fa-home"></i></div>
+    <!-- ═══ SECTION GIFT ═══ -->
+    <section id="gift">
+      <h3 class="sec-title muncul-kiri px">WEDDING GIFT</h3>
+      <p class="gift-intro px">
+        Kehadiran Anda merupakan do'a serta rasa syukur bagi kami. Namun jika
+        memberi adalah bentuk cinta Anda, kami dengan senang hati menerimanya.
+      </p>
+      <div class="gift-addr muncul-kanan px">
+        <div class="gift-addr-icon"><i class="fas fa-gifts"></i></div>
         <div>
-          <p class="gift-addr-title">Kirim Kado: Nadine Ersabilla Oktavia</p>
-          <p class="gift-addr-desc">Jl. Jenggolo No.1B, Bedrek, Siwalanpanji,<br>Kec. Buduran, Kab. Sidoarjo</p>
+          <p class="gift-addr-title">Kirim Kado</p>
+          <p class="gift-addr-desc">
+            Nadine Ersabilla Oktavia<br />Jl. Jenggolo No.1B, Bedrek,
+            Siwalanpanji,<br />Kec. Buduran, Kab. Sidoarjo
+          </p>
         </div>
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
-        <button class="btn" id="btnAmplop"><i class="fas fa-search"></i> Lihat Rekening</button>
-        <button class="btn" id="btn-hide" style="display:none;"><i class="far fa-eye-slash"></i> Sembunyikan</button>
+      <div
+        style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 5px"
+        class="px"
+      >
+        <button class="btn btn-sm" id="btnAmplop">
+          <i class="fas fa-search"></i> Lihat Rekening
+        </button>
+        <button class="btn btn-sm" id="btn-hide" style="display: none">
+          <i class="far fa-eye-slash"></i> Sembunyikan
+        </button>
       </div>
-      <div id="amplop" style="display:none;">
+      <div id="amplop" style="display: none" class="px">
         <div class="bank-cards">
           <div class="bank-card">
-            <img src="assets/img/bca-1-png.webp" alt="BCA" />
+            <p
+              style="
+                font-family: var(--display);
+                font-size: 24px;
+                letter-spacing: 2px;
+                color: var(--red);
+                margin-bottom: 8px;
+              "
+            >
+              BCA
+            </p>
             <p class="bank-acct-name">a.n Daniel Dwi Prajitno</p>
             <p class="bank-acct-num">0812 345 678XX</p>
-            <button class="copy-btn" data-copy="0812345678XX"><i class="far fa-copy"></i> Salin Rekening</button>
+            <button class="copy-btn" data-copy="0812345678XX">
+              <i class="far fa-copy"></i> Salin Rekening
+            </button>
           </div>
           <div class="bank-card">
-            <img src="assets/img/dana.png" alt="Dana" />
+            <p
+              style="
+                font-family: var(--display);
+                font-size: 24px;
+                letter-spacing: 2px;
+                color: var(--red);
+                margin-bottom: 8px;
+              "
+            >
+              DANA
+            </p>
             <p class="bank-acct-name">a.n Daniel Dwi Prajitno</p>
             <p class="bank-acct-num">0812 345 678XX</p>
-            <button class="copy-btn" data-copy="0812345678XX"><i class="far fa-copy"></i> Salin Rekening</button>
+            <button class="copy-btn" data-copy="0812345678XX">
+              <i class="far fa-copy"></i> Salin Rekening
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WISH / RSVP -->
-    <section id="wish" class="section-wrap cream">
-      <div class="wavy-top" style="margin:0 -22px 20px;"></div>
-      <div class="sec-divider">
-        <div class="sec-divider-line"></div>
-        <h3 class="sec-title" style="flex-shrink:0;">Ucapan &amp; RSVP</h3>
-        <div class="sec-divider-line"></div>
-      </div>
-      <p class="sec-subtitle" style="margin-bottom:16px;">Berikan ucapan terbaik untuk kami</p>
-      <div class="rsvp-card">
-        <p class="rsvp-header" id="rsvp-toggle"><span id="rsvp-count-label">0</span> Ucapan &amp; RSVP</p>
+    <!-- ═══ SECTION WISH / RSVP ═══ -->
+    <section id="wish">
+      <h3 class="sec-title muncul-kiri px">WEDDING WISH &amp; RSVP</h3>
+      <p class="px" style="font-size: 14px">
+        <span class="badge-red">Beri Do'a</span> &amp; Ucapan Terbaikmu
+      </p>
+      <p
+        class="px"
+        style="font-size: 12px; line-height: 1.5; color: var(--muted)"
+      >
+        Kepada tamu undangan diharapkan untuk mengisi form ucapan &amp; RSVP
+        kehadiran di bawah ini
+      </p>
+
+      <div class="rsvp-card px">
+        <p class="rsvp-header" id="rsvp-toggle">
+          <span id="rsvp-count-label">0</span> Ucapan &amp; RSVP
+        </p>
         <div class="rsvp-counts">
-          <div class="rsvp-count hadir"><span id="c-hadir">0</span><br>Akan Hadir</div>
-          <div class="rsvp-count tidak"><span id="c-tidak">0</span><br>Tidak Hadir</div>
+          <div class="rsvp-count hadir">
+            <span id="c-hadir">0</span><br />Saya Akan Hadir
+          </div>
+          <div class="rsvp-count tidak">
+            <span id="c-tidak">0</span><br />Maaf, Saya Tidak Hadir
+          </div>
         </div>
         <form class="rsvp-form" id="rsvpForm" onsubmit="submitWish(event)">
-          <input type="text" id="w-nama" placeholder="Nama Anda" required maxlength="100" />
-          <textarea id="w-ucapan" placeholder="Berikan ucapan terbaik..." rows="3" required minlength="2"></textarea>
+          <input
+            type="text"
+            id="w-nama"
+            placeholder="Isikan Nama Anda"
+            required
+            maxlength="100"
+          />
+          <textarea
+            id="w-ucapan"
+            placeholder="Berikan Ucapan Terbaik"
+            rows="3"
+            required
+            minlength="2"
+          ></textarea>
           <div class="rsvp-confirm">
-            <button type="button" id="btn-hadir" class="confirm-btn" onclick="setAttend('hadir')">Akan Hadir &#9989;</button>
-            <button type="button" id="btn-tidak" class="confirm-btn" onclick="setAttend('tidak')">Tidak Hadir &#10060;</button>
+            <button
+              type="button"
+              id="btn-hadir"
+              class="confirm-btn"
+              onclick="setAttend('hadir')"
+            >
+              Saya Akan Hadir ✅
+            </button>
+            <button
+              type="button"
+              id="btn-tidak"
+              class="confirm-btn"
+              onclick="setAttend('tidak')"
+            >
+              Maaf, Tidak Hadir ❌
+            </button>
           </div>
           <input type="hidden" id="w-konfirmasi" value="" />
-          <button type="submit" class="rsvp-submit">&#128140; Kirim Ucapan</button>
+          <button type="submit" class="rsvp-submit">Kirim Ucapan</button>
         </form>
         <div class="wishes-box" id="wishesList"></div>
+        <p style="text-align: center; margin-top: 16px">
+          <a
+            class="sirk-badge"
+            href="https://www.sirkulasi.my.id/"
+            target="_blank"
+            rel="noopener"
+            >Undangan Digital oleh Sirkulasi</a
+          >
+        </p>
       </div>
-      <div class="wavy-bot" style="margin:20px -22px 0;"></div>
     </section>
 
-    <!-- CLOSING -->
+    <!-- ═══ SECTION CLOSING ═══ -->
     <section id="closing">
-      <div class="closing-inner">
-        <div style="display:flex;justify-content:space-between;width:100%;margin-bottom:4px;">
-          <svg width="44" height="34" viewBox="0 0 100 70" fill="none">
-            <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-            <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-            <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          </svg>
-          <svg width="44" height="34" viewBox="0 0 100 70" fill="none" style="transform:scaleX(-1)">
-            <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-            <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-            <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          </svg>
-        </div>
-        <h2 class="closing-names muncul">Daniel &amp; Nadine</h2>
-        <p style="font-family:var(--script);font-size:18px;color:var(--red);font-weight:700;">23 Agustus 2026</p>
-        <p class="closing-msg">Kehadiran serta do'a restu Bapak/Ibu/Saudara/i merupakan kehormatan dan kebahagiaan bagi kami. Terima kasih.</p>
-        <div class="family-row muncul">
-          <div class="family-col" style="text-align:center;background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:12px 8px;">
-            <p class="family-label">Mempelai Pria</p>
-            <p class="family-desc">Putra dari</p>
-            <p class="family-names">Bpk. Alm. Andreas Edhi Prajitno<br>&amp; Ibu Yvone Laura Bokings</p>
+      <div class="closing-inner px">
+        <div class="netflix-logo-text" style="font-size: 18px">THE WEDDING</div>
+        <h2 class="closing-names muncul">Nadine &amp; Daniel</h2>
+        <p style="font-size: 14px">
+          <span class="badge-red">23 Agustus 2026</span>
+        </p>
+        <p style="font-size: 14px; color: var(--muted)">
+          <span class="badge-red">Terima Kasih</span> Atas Kehadiran &amp; Doa
+          Restunya
+        </p>
+        <p style="font-size: 12px; line-height: 1.5; color: var(--muted)">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga
+          apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu
+          kepada kedua mempelai.
+        </p>
+        <div class="family-row">
+          <div class="family-col muncul-kiri">
+            <p class="family-label">Keluarga Besar</p>
+            <p class="family-desc">Mempelai Pria</p>
+            <p class="family-names">
+              Bpk. Alm. Andreas Edhi Prajitno<br />&amp; Ibu Yvone Laura Bokings
+            </p>
           </div>
-          <div class="family-col" style="text-align:center;background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:12px 8px;">
-            <p class="family-label">Mempelai Wanita</p>
-            <p class="family-desc">Putri dari</p>
-            <p class="family-names">Bpk. Alm. Isman Yadi<br>&amp; Ibu Sulas Sa'iyah</p>
+          <div class="family-col muncul-kanan">
+            <p class="family-label">Keluarga Besar</p>
+            <p class="family-desc">Mempelai Wanita</p>
+            <p class="family-names">
+              Bpk. Alm. Isman Yadi<br />&amp; Ibu Sulas Sa'iyah
+            </p>
           </div>
         </div>
-        <p style="font-size:13px;color:var(--muted);text-align:center;line-height:1.7;font-style:italic;" class="muncul">"Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai."</p>
-        <div style="display:flex;justify-content:space-between;width:100%;margin-top:8px;">
-          <svg width="44" height="34" viewBox="0 0 100 70" fill="none" style="transform:scaleY(-1)">
-            <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-            <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-            <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          </svg>
-          <svg width="44" height="34" viewBox="0 0 100 70" fill="none" style="transform:scale(-1,-1)">
-            <ellipse cx="28" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="26" ry="16" fill="#c8102e" opacity="0.9" transform="rotate(15 72 32)"/>
-            <ellipse cx="28" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(-15 28 32)"/>
-            <ellipse cx="72" cy="32" rx="13" ry="8" fill="#e8304a" transform="rotate(15 72 32)"/>
-            <circle cx="50" cy="32" r="9" fill="#c8102e"/><circle cx="50" cy="32" r="5" fill="#e8304a"/>
-          </svg>
-        </div>
+        <p style="font-size: 14px; color: var(--muted)">
+          Sampai Jumpa di Hari Bahagia Kami 🎊
+        </p>
       </div>
-      <p class="footer-credit">Made with &#9829; &mdash; Undangan Digital Daniel &amp; Nadine</p>
+      <p class="footer-credit">
+        Made with ❤ by
+        <a href="https://www.sirkulasi.my.id/" target="_blank" rel="noopener"
+          >Sirkulasi</a
+        >
+      </p>
     </section>
 
-    <!-- AUDIO -->
+    <!-- ═══ AUDIO ═══ -->
     <audio id="song" loop preload="none">
-      <source src="assets/audio/y2mate.com-Westlife-I-Wanna-Grow-Old-with-You-Official-Audio_64kbps-1-10.mp3" type="audio/mpeg" />
+      <source
+        src="assets/audio/y2mate.com-Westlife-I-Wanna-Grow-Old-with-You-Official-Audio_64kbps-1-10.mp3"
+        type="audio/mpeg"
+      />
     </audio>
     <button id="audio-btn" title="Play / Pause Music">
       <div class="audio-eq paused" id="audio-eq">
@@ -670,57 +2098,370 @@
       </div>
     </button>
 
-    <!-- LIGHTBOX -->
+    <!-- ═══ LIGHTBOX ═══ -->
     <div id="lightbox" onclick="closeLightbox(event)">
-      <button id="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+      <button id="lightbox-close" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
       <img id="lightbox-img" src="" alt="" />
     </div>
 
+    <!-- ═══ JAVASCRIPT ═══ -->
     <script>
       "use strict";
-      var isSectionLocked=true,userPaused=false;
-      window.addEventListener("DOMContentLoaded",function(){
-        initSplash();initScrollProgress();lockSection();initScrollReveal();
-        countdown();setInterval(countdown,1000);initBankToggle();initCopyBtns();guestName();
+      var isSectionLocked = true,
+        userPaused = false;
+
+      window.addEventListener("DOMContentLoaded", function () {
+        initSplash();
+        initScrollProgress();
+        lockSection();
+        initScrollReveal();
+        countdown();
+        setInterval(countdown, 1000);
+        initBankToggle();
+        initCopyBtns();
+        guestName();
+        slideshowStd();
       });
-      window.onbeforeunload=function(){window.scrollTo(0,0)};
-      function lockSection(){disableScroll();document.body.style.position="fixed";document.body.style.overflowY="scroll";document.body.style.height="100vh"}
-      function unlockSection(){enableScroll();document.body.style.position="";document.body.style.overflowY="";document.getElementById("tombol-buka").style.display="none";isSectionLocked=false}
-      document.getElementById("tombol-buka").addEventListener("click",function(e){
-        e.preventDefault();unlockSection();
-        setTimeout(function(){document.getElementById("opening").scrollIntoView({behavior:"smooth"})},80);
-        startAudio();
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+
+      /* ── LOCK ── */
+      function lockSection() {
+        disableScroll();
+        document.body.style.position = "fixed";
+        document.body.style.overflowY = "scroll";
+        document.body.style.height = "100vh";
+      }
+      function unlockSection() {
+        enableScroll();
+        document.body.style.position = "";
+        document.body.style.overflowY = "";
+        document.getElementById("tombol-buka").style.display = "none";
+        isSectionLocked = false;
+      }
+      document
+        .getElementById("tombol-buka")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          unlockSection();
+          setTimeout(function () {
+            document
+              .getElementById("opening")
+              .scrollIntoView({ behavior: "smooth" });
+          }, 80);
+          startAudio();
+        });
+      function disableScroll() {
+        var x = window.scrollX,
+          y = window.scrollY;
+        window.onscroll = function () {
+          window.scrollTo(x, y);
+        };
+      }
+      function enableScroll() {
+        window.onscroll = null;
+      }
+
+      /* ── AUDIO ── */
+      var audio = document.getElementById("song");
+      var audioEq = document.getElementById("audio-eq");
+      var audioLabel = document.getElementById("audio-np-label");
+      function setAudioPlaying(p) {
+        if (p) {
+          audioEq.classList.remove("paused");
+          audioLabel.textContent = "Now Playing";
+        } else {
+          audioEq.classList.add("paused");
+          audioLabel.textContent = "Paused";
+        }
+      }
+      function startAudio() {
+        if (!audio) return;
+        audio.currentTime = 10;
+        audio
+          .play()
+          .then(function () {
+            setAudioPlaying(true);
+          })
+          .catch(function (e) {
+            console.warn("Autoplay blocked:", e);
+          });
+      }
+      document
+        .getElementById("audio-btn")
+        .addEventListener("click", function () {
+          if (audio.paused) {
+            userPaused = false;
+            audio.play();
+          } else {
+            userPaused = true;
+            audio.pause();
+          }
+        });
+      audio.addEventListener("play", function () {
+        setAudioPlaying(true);
       });
-      function disableScroll(){var x=window.scrollX,y=window.scrollY;window.onscroll=function(){window.scrollTo(x,y)}}
-      function enableScroll(){window.onscroll=null}
-      var audio=document.getElementById("song");
-      var audioEq=document.getElementById("audio-eq");
-      var audioLabel=document.getElementById("audio-np-label");
-      function setAudioPlaying(p){if(p){audioEq.classList.remove("paused");audioLabel.textContent="Now Playing"}else{audioEq.classList.add("paused");audioLabel.textContent="Paused"}}
-      function startAudio(){if(!audio)return;audio.currentTime=10;audio.play().then(function(){setAudioPlaying(true)}).catch(function(e){console.warn("Autoplay blocked:",e)})}
-      document.getElementById("audio-btn").addEventListener("click",function(){if(audio.paused){userPaused=false;audio.play()}else{userPaused=true;audio.pause()}});
-      audio.addEventListener("play",function(){setAudioPlaying(true)});
-      audio.addEventListener("pause",function(){setAudioPlaying(false)});
-      document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden"){if(!audio.paused)audio.pause()}else if(!userPaused){if(audio.paused)audio.play().catch(function(){})}});
-      function initScrollReveal(){revealAll();window.addEventListener("scroll",revealAll,{passive:true})}
-      function revealAll(){var sel=".muncul,.muncul-kiri,.muncul-kanan,.zoom",th=120,wh=window.innerHeight;document.querySelectorAll(sel).forEach(function(el){if(el.getBoundingClientRect().top<wh-th){el.classList.add("active")}else{el.classList.remove("active")}})}
-      var cdTarget=new Date("Aug 23 2026 09:30:00").getTime();
-      function countdown(){var now=Date.now(),diff=cdTarget-now,d=0,h=0,m=0,s=0;if(diff>0){d=Math.floor(diff/86400000);h=Math.floor((diff%86400000)/3600000);m=Math.floor((diff%3600000)/60000);s=Math.floor((diff%60000)/1000)}document.getElementById("cd-d").textContent=pad(d);document.getElementById("cd-h").textContent=pad(h);document.getElementById("cd-m").textContent=pad(m);document.getElementById("cd-s").textContent=pad(s)}
-      function pad(n){return String(n).padStart(2,"0")}
-      function initBankToggle(){var bs=document.getElementById("btnAmplop"),bh=document.getElementById("btn-hide"),a=document.getElementById("amplop");bs.addEventListener("click",function(){a.style.display="block";bs.style.display="none";bh.style.display="block"});bh.addEventListener("click",function(){a.style.display="none";bh.style.display="none";bs.style.display="block"})}
-      function initCopyBtns(){document.querySelectorAll(".copy-btn").forEach(function(btn){btn.addEventListener("click",function(){var txt=btn.getAttribute("data-copy");if(navigator.clipboard){navigator.clipboard.writeText(txt).catch(fallbackCopy.bind(null,txt))}else{fallbackCopy(txt)}var orig=btn.innerHTML;btn.innerHTML='<i class="fas fa-check"></i> Berhasil!';setTimeout(function(){btn.innerHTML=orig},2000)})})}
-      function fallbackCopy(txt){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta)}
-      function openLightbox(el){document.getElementById("lightbox-img").src=el.querySelector("img").src;document.getElementById("lightbox").classList.add("open")}
-      function closeLightbox(e){if(!e||e.target!==document.getElementById("lightbox-img")){document.getElementById("lightbox").classList.remove("open");document.getElementById("lightbox-img").src=""}}
-      var wishes=[],attend="";
-      function setAttend(val){attend=val;document.getElementById("w-konfirmasi").value=val;document.getElementById("btn-hadir").className="confirm-btn"+(val==="hadir"?" yes":"");document.getElementById("btn-tidak").className="confirm-btn"+(val==="tidak"?" no":"")}
-      function submitWish(e){e.preventDefault();if(!attend){alert("Mohon konfirmasi kehadiran anda");return}var nama=document.getElementById("w-nama").value.trim(),ucapan=document.getElementById("w-ucapan").value.trim();wishes.unshift({nama:nama,ucapan:ucapan,attend:attend});document.getElementById("c-hadir").textContent=wishes.filter(function(w){return w.attend==="hadir"}).length;document.getElementById("c-tidak").textContent=wishes.filter(function(w){return w.attend==="tidak"}).length;document.getElementById("rsvp-count-label").textContent=wishes.length;renderWishes();document.getElementById("rsvpForm").reset();attend="";document.getElementById("btn-hadir").className="confirm-btn";document.getElementById("btn-tidak").className="confirm-btn"}
-      function renderWishes(){document.getElementById("wishesList").innerHTML=wishes.map(function(w){var icon=w.attend==="hadir"?"✅":"❌";return'<div class="wish-item"><div class="wish-meta"><div class="wish-avatar">'+esc(w.nama).charAt(0).toUpperCase()+'</div><span class="wish-name">'+esc(w.nama)+'</span><span>'+icon+'</span></div><p class="wish-text">'+esc(w.ucapan)+'</p></div>'}).join("")}
-      function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
-      function guestName(){var params=new URLSearchParams(window.location.search),keys=["to","dear","kepada"];for(var i=0;i<keys.length;i++){var v=params.get(keys[i]);if(v&&v.trim()){document.getElementById("namatamu").textContent=v.trim();break}}}
-      function addToCalendar(){var start="20260823T023000Z",end="20260823T060000Z",title=encodeURIComponent("Resepsi Pernikahan Daniel & Nadine"),details=encodeURIComponent("Kami mengundang Anda untuk menjadi bagian dari hari bahagia kami."),loc=encodeURIComponent("Hotel Edotel (SMKN 1 BUDURAN), Jl. Jenggolo No.1B, Siwalanpanji, Buduran, Sidoarjo");window.open("https://www.google.com/calendar/render?action=TEMPLATE&text="+title+"&dates="+start+"/"+end+"&details="+details+"&location="+loc,"_blank")}
-      function initSplash(){var splash=document.getElementById("splash");if(!splash)return;setTimeout(function(){splash.classList.add("fade-out");setTimeout(function(){splash.style.display="none"},700)},2600)}
-      function initScrollProgress(){var bar=document.getElementById("scroll-progress");if(!bar)return;function update(){var el=document.documentElement,top=el.scrollTop||document.body.scrollTop,h=el.scrollHeight-el.clientHeight;bar.style.width=(h>0?(top/h)*100:0)+"%"}window.addEventListener("scroll",update,{passive:true});update()}
+      audio.addEventListener("pause", function () {
+        setAudioPlaying(false);
+      });
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") {
+          if (!audio.paused) audio.pause();
+        } else if (!userPaused) {
+          if (audio.paused) audio.play().catch(function () {});
+        }
+      });
+
+      /* ── SCROLL REVEAL ── */
+      function initScrollReveal() {
+        revealAll();
+        window.addEventListener("scroll", revealAll, { passive: true });
+      }
+      function revealAll() {
+        var sel = ".muncul,.muncul-kiri,.muncul-kanan,.zoom",
+          th = 150,
+          wh = window.innerHeight;
+        document.querySelectorAll(sel).forEach(function (el) {
+          if (el.getBoundingClientRect().top < wh - th) {
+            el.classList.add("active");
+          } else {
+            el.classList.remove("active");
+          }
+        });
+      }
+
+      /* ── COUNTDOWN ── */
+      var cdTarget = new Date("Aug 23 2026 09:30:00").getTime();
+      function countdown() {
+        var now = Date.now(),
+          diff = cdTarget - now,
+          d = 0,
+          h = 0,
+          m = 0,
+          s = 0;
+        if (diff > 0) {
+          d = Math.floor(diff / 86400000);
+          h = Math.floor((diff % 86400000) / 3600000);
+          m = Math.floor((diff % 3600000) / 60000);
+          s = Math.floor((diff % 60000) / 1000);
+        }
+        document.getElementById("cd-d").textContent = pad(d);
+        document.getElementById("cd-h").textContent = pad(h);
+        document.getElementById("cd-m").textContent = pad(m);
+        document.getElementById("cd-s").textContent = pad(s);
+      }
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      /* ── SLIDESHOW STD ── */
+      function slideshowStd() {
+        var b1 = document.getElementById("std-bg1"),
+          b2 = document.getElementById("std-bg2"),
+          s = true;
+        setInterval(function () {
+          if (s) {
+            b2.style.opacity = "1";
+            b1.style.opacity = "0";
+          } else {
+            b1.style.opacity = "1";
+            b2.style.opacity = "0";
+          }
+          b1.style.transition = "opacity 1.25s ease";
+          b2.style.transition = "opacity 1.25s ease";
+          s = !s;
+        }, 2250);
+      }
+
+      /* ── BANK TOGGLE ── */
+      function initBankToggle() {
+        var bs = document.getElementById("btnAmplop"),
+          bh = document.getElementById("btn-hide"),
+          a = document.getElementById("amplop");
+        bs.addEventListener("click", function () {
+          a.style.display = "block";
+          bs.style.display = "none";
+          bh.style.display = "block";
+        });
+        bh.addEventListener("click", function () {
+          a.style.display = "none";
+          bh.style.display = "none";
+          bs.style.display = "block";
+        });
+      }
+
+      /* ── COPY BUTTONS ── */
+      function initCopyBtns() {
+        document.querySelectorAll(".copy-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var txt = btn.getAttribute("data-copy");
+            if (navigator.clipboard) {
+              navigator.clipboard
+                .writeText(txt)
+                .catch(fallbackCopy.bind(null, txt));
+            } else {
+              fallbackCopy(txt);
+            }
+            var orig = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Berhasil Disalin!';
+            setTimeout(function () {
+              btn.innerHTML = orig;
+            }, 2000);
+          });
+        });
+      }
+      function fallbackCopy(txt) {
+        var ta = document.createElement("textarea");
+        ta.value = txt;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+
+      /* ── LIGHTBOX ── */
+      function openLightbox(el) {
+        document.getElementById("lightbox-img").src =
+          el.querySelector("img").src;
+        document.getElementById("lightbox").classList.add("open");
+      }
+      function closeLightbox(e) {
+        if (!e || e.target !== document.getElementById("lightbox-img")) {
+          document.getElementById("lightbox").classList.remove("open");
+          document.getElementById("lightbox-img").src = "";
+        }
+      }
+
+      /* ── RSVP / WISHES ── */
+      var wishes = [],
+        attend = "";
+      function setAttend(val) {
+        attend = val;
+        document.getElementById("w-konfirmasi").value = val;
+        document.getElementById("btn-hadir").className =
+          "confirm-btn" + (val === "hadir" ? " yes" : "");
+        document.getElementById("btn-tidak").className =
+          "confirm-btn" + (val === "tidak" ? " no" : "");
+      }
+      function submitWish(e) {
+        e.preventDefault();
+        if (!attend) {
+          alert("Mohon konfirmasi kehadiran anda");
+          return;
+        }
+        var nama = document.getElementById("w-nama").value.trim(),
+          ucapan = document.getElementById("w-ucapan").value.trim();
+        wishes.unshift({ nama: nama, ucapan: ucapan, attend: attend });
+        document.getElementById("c-hadir").textContent = wishes.filter(
+          function (w) {
+            return w.attend === "hadir";
+          },
+        ).length;
+        document.getElementById("c-tidak").textContent = wishes.filter(
+          function (w) {
+            return w.attend === "tidak";
+          },
+        ).length;
+        document.getElementById("rsvp-count-label").textContent = wishes.length;
+        renderWishes();
+        document.getElementById("rsvpForm").reset();
+        attend = "";
+        document.getElementById("btn-hadir").className = "confirm-btn";
+        document.getElementById("btn-tidak").className = "confirm-btn";
+      }
+      function renderWishes() {
+        document.getElementById("wishesList").innerHTML = wishes
+          .map(function (w) {
+            var icon = w.attend === "hadir" ? "✅" : "❌";
+            return (
+              '<div class="wish-item"><div class="wish-meta"><div class="wish-avatar">' +
+              esc(w.nama).charAt(0).toUpperCase() +
+              '</div><span class="wish-name">' +
+              esc(w.nama) +
+              "</span><span>" +
+              icon +
+              '</span></div><p class="wish-text">' +
+              esc(w.ucapan) +
+              "</p></div>"
+            );
+          })
+          .join("");
+      }
+      function esc(s) {
+        return s
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      /* ── GUEST NAME FROM URL ── */
+      function guestName() {
+        var params = new URLSearchParams(window.location.search),
+          keys = ["to", "dear", "kepada"];
+        for (var i = 0; i < keys.length; i++) {
+          var v = params.get(keys[i]);
+          if (v && v.trim()) {
+            document.getElementById("namatamu").textContent = v.trim();
+            break;
+          }
+        }
+      }
+
+      /* ── ADD TO CALENDAR ── */
+      function addToCalendar() {
+        var start = "20260823T023000Z",
+          end = "20260823T060000Z",
+          title = encodeURIComponent("Resepsi Pernikahan Nadine & Daniel"),
+          details = encodeURIComponent(
+            "Kami mengundang Anda untuk menjadi bagian dari hari bahagia kami.",
+          ),
+          loc = encodeURIComponent(
+            "Hotel Edotel (SMKN 1 BUDURAN), Jl. Jenggolo No.1B, Siwalanpanji, Buduran, Sidoarjo",
+          );
+        window.open(
+          "https://www.google.com/calendar/render?action=TEMPLATE&text=" +
+            title +
+            "&dates=" +
+            start +
+            "/" +
+            end +
+            "&details=" +
+            details +
+            "&location=" +
+            loc,
+          "_blank",
+        );
+      }
+
+      /* ── SPLASH ── */
+      function initSplash() {
+        var s = document.getElementById("splash");
+        if (!s) return;
+        setTimeout(function () {
+          s.classList.add("fade-out");
+          setTimeout(function () {
+            s.style.display = "none";
+          }, 700);
+        }, 2600);
+      }
+
+      /* ── SCROLL PROGRESS ── */
+      function initScrollProgress() {
+        var bar = document.getElementById("scroll-progress");
+        if (!bar) return;
+        function update() {
+          var el = document.documentElement,
+            top = el.scrollTop || document.body.scrollTop,
+            h = el.scrollHeight - el.clientHeight;
+          bar.style.width = (h > 0 ? (top / h) * 100 : 0) + "%";
+        }
+        window.addEventListener("scroll", update, { passive: true });
+        update();
+      }
     </script>
   </body>
 </html>
