@@ -2230,6 +2230,7 @@
         initBankToggle();
         initCopyBtns();
         guestName();
+        initWishes();
         slideshowStd();
       });
       window.onbeforeunload = function () {
@@ -2443,9 +2444,83 @@
         }
       }
 
-      /* ── RSVP / WISHES ── */
+      /* ── RSVP / WISHES (PERSISTENT VIA LOCALSTORAGE & OPSIONAL GOOGLE SHEETS) ── */
+      var GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwDumpaTJEGXxSpmZW4_UaurJjfJuTWN7dn9-thNcov2-J3a-KE4tjmON_HZDLG7mTdhA/exec";
+      var defaultWishes = [
+        {
+          nama: "Budi & Keluarga",
+          ucapan: "Selamat menempuh hidup baru Daniel & Nadine! Semoga lancar sampai hari H dan bahagia selalu selamanya.",
+          attend: "hadir",
+          time: "Baru saja"
+        },
+        {
+          nama: "Siska Wulandari",
+          ucapan: "Happy wedding Nadine! So happy for both of you. Semoga menjadi keluarga yang harmonis dan penuh cinta.",
+          attend: "hadir",
+          time: "1 jam lalu"
+        },
+        {
+          nama: "Hendra Pratama",
+          ucapan: "Selamat ya Daniel & Nadine! Mohon maaf sepertinya berhalangan hadir karena sedang di luar kota. Doa terbaik untuk kalian berdua!",
+          attend: "tidak",
+          time: "3 jam lalu"
+        }
+      ];
       var wishes = [],
         attend = "";
+
+      function initWishes() {
+        var saved = localStorage.getItem("nadine_daniel_rsvp_wishes");
+        if (saved) {
+          try {
+            wishes = JSON.parse(saved);
+          } catch (e) {
+            wishes = defaultWishes.slice();
+          }
+        } else {
+          wishes = defaultWishes.slice();
+          saveWishes();
+        }
+        updateWishStats();
+        renderWishes();
+
+        /* Ambil data real-time dari Google Spreadsheet jika URL disetting */
+        if (GOOGLE_SHEET_URL) {
+          fetch(GOOGLE_SHEET_URL)
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+              if (Array.isArray(data) && data.length > 0) {
+                wishes = data;
+                saveWishes();
+                updateWishStats();
+                renderWishes();
+              }
+            })
+            .catch(function () {});
+        }
+      }
+
+      function saveWishes() {
+        try {
+          localStorage.setItem("nadine_daniel_rsvp_wishes", JSON.stringify(wishes));
+        } catch (e) {}
+      }
+
+      function updateWishStats() {
+        var hadirCount = wishes.filter(function (w) {
+          return w.attend === "hadir";
+        }).length;
+        var tidakCount = wishes.filter(function (w) {
+          return w.attend === "tidak";
+        }).length;
+        var cHadir = document.getElementById("c-hadir");
+        var cTidak = document.getElementById("c-tidak");
+        var rsvpCountLabel = document.getElementById("rsvp-count-label");
+        if (cHadir) cHadir.textContent = hadirCount;
+        if (cTidak) cTidak.textContent = tidakCount;
+        if (rsvpCountLabel) rsvpCountLabel.textContent = wishes.length;
+      }
+
       function setAttend(val) {
         attend = val;
         document.getElementById("w-konfirmasi").value = val;
@@ -2454,50 +2529,86 @@
         document.getElementById("btn-tidak").className =
           "confirm-btn" + (val === "tidak" ? " no" : "");
       }
+
       function submitWish(e) {
         e.preventDefault();
         if (!attend) {
           alert("Mohon konfirmasi kehadiran anda");
           return;
         }
-        var nama = document.getElementById("w-nama").value.trim(),
-          ucapan = document.getElementById("w-ucapan").value.trim();
-        wishes.unshift({ nama: nama, ucapan: ucapan, attend: attend });
-        document.getElementById("c-hadir").textContent = wishes.filter(
-          function (w) {
-            return w.attend === "hadir";
-          },
-        ).length;
-        document.getElementById("c-tidak").textContent = wishes.filter(
-          function (w) {
-            return w.attend === "tidak";
-          },
-        ).length;
-        document.getElementById("rsvp-count-label").textContent = wishes.length;
+        var namaInput = document.getElementById("w-nama");
+        var ucapanInput = document.getElementById("w-ucapan");
+        var nama = namaInput ? namaInput.value.trim() : "Tamu";
+        var ucapan = ucapanInput ? ucapanInput.value.trim() : "";
+
+        var newWish = {
+          nama: nama,
+          ucapan: ucapan,
+          attend: attend,
+          time: "Baru saja"
+        };
+
+        wishes.unshift(newWish);
+        saveWishes();
+        updateWishStats();
         renderWishes();
+
+        /* Kirim ke Google Sheets apabila URL telah diisi */
+        if (GOOGLE_SHEET_URL) {
+          fetch(GOOGLE_SHEET_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(newWish)
+          }).catch(function () {});
+        }
+
         document.getElementById("rsvpForm").reset();
         attend = "";
         document.getElementById("btn-hadir").className = "confirm-btn";
         document.getElementById("btn-tidak").className = "confirm-btn";
+
+        /* Pertahankan nama tamu otomatis di input setelah kirim ucapan */
+        if (window.currentGuestName && namaInput) {
+          namaInput.value = window.currentGuestName;
+        }
       }
+
       function renderWishes() {
-        document.getElementById("wishesList").innerHTML = wishes
+        var container = document.getElementById("wishesList");
+        if (!container) return;
+        container.innerHTML = wishes
           .map(function (w) {
             var icon = w.attend === "hadir" ? "✅" : "❌";
+            var badgeColor = w.attend === "hadir" ? "rgba(46, 204, 113, 0.2)" : "rgba(231, 76, 60, 0.2)";
+            var badgeTextColor = w.attend === "hadir" ? "#2ecc71" : "#e74c3c";
+            var badgeText = w.attend === "hadir" ? "Hadir" : "Tidak Hadir";
+            var timeStr = w.time
+              ? '<span style="font-size: 10px; color: #888; margin-left: auto;">' + esc(w.time) + "</span>"
+              : "";
             return (
               '<div class="wish-item"><div class="wish-meta"><div class="wish-avatar">' +
               esc(w.nama).charAt(0).toUpperCase() +
               '</div><span class="wish-name">' +
               esc(w.nama) +
-              "</span><span>" +
+              '</span><span style="font-size:10px; padding:2px 6px; border-radius:4px; background:' +
+              badgeColor +
+              "; color:" +
+              badgeTextColor +
+              '; font-weight:600;">' +
               icon +
-              '</span></div><p class="wish-text">' +
+              " " +
+              badgeText +
+              "</span>" +
+              timeStr +
+              '</div><p class="wish-text">' +
               esc(w.ucapan) +
               "</p></div>"
             );
           })
           .join("");
       }
+
       function esc(s) {
         return s
           .replace(/&/g, "&amp;")
@@ -2509,12 +2620,30 @@
       /* ── GUEST NAME FROM URL ── */
       function guestName() {
         var params = new URLSearchParams(window.location.search),
-          keys = ["to", "dear", "kepada"];
+          keys = ["to", "dear", "kepada", "tamu", "name"];
+        var guest = "";
         for (var i = 0; i < keys.length; i++) {
           var v = params.get(keys[i]);
           if (v && v.trim()) {
-            document.getElementById("namatamu").textContent = v.trim();
+            guest = v.trim();
             break;
+          }
+        }
+        if (guest) {
+          window.currentGuestName = guest;
+          var namatamuEl = document.getElementById("namatamu");
+          if (namatamuEl) namatamuEl.textContent = guest;
+          var wNama = document.getElementById("w-nama");
+          if (wNama) wNama.value = guest;
+        } else {
+          var namatamuEl = document.getElementById("namatamu");
+          if (namatamuEl) {
+            var currentText = namatamuEl.textContent.trim();
+            if (currentText && currentText !== "Tamu Undangan") {
+              window.currentGuestName = currentText;
+              var wNama = document.getElementById("w-nama");
+              if (wNama && !wNama.value) wNama.value = currentText;
+            }
           }
         }
       }
