@@ -1658,10 +1658,7 @@
       <!-- Hero single image -->
       <div class="opening-hero-slideshow">
         <div class="hero-slide" style="opacity: 1">
-          <img
-            src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg"
-            alt="Daniel dan Nadine Wedding"
-          />
+          <img src="assets/img/new/OPEN.jpg" alt="Daniel dan Nadine Wedding" />
         </div>
         <div class="hero-gradient"></div>
       </div>
@@ -1704,9 +1701,11 @@
         hidup dari jenismu sendiri supaya kamu dapat ketenangan hati dan
         dijadikannya kasih sayang di antara kamu."
       </p>
+      /*
       <p class="quran-ref px">
         <span class="badge-red">Qur'an Surah</span> Ar-Rum: 21
       </p>
+      */
 
       <h3 class="sec-title muncul-kiri">Bride &amp; Groom</h3>
 
@@ -2445,26 +2444,30 @@
       }
 
       /* ── RSVP / WISHES (PERSISTENT VIA LOCALSTORAGE & OPSIONAL GOOGLE SHEETS) ── */
-      var GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwDumpaTJEGXxSpmZW4_UaurJjfJuTWN7dn9-thNcov2-J3a-KE4tjmON_HZDLG7mTdhA/exec";
+      var GOOGLE_SHEET_URL =
+        "https://script.google.com/macros/s/AKfycbwDumpaTJEGXxSpmZW4_UaurJjfJuTWN7dn9-thNcov2-J3a-KE4tjmON_HZDLG7mTdhA/exec";
       var defaultWishes = [
         {
           nama: "Budi & Keluarga",
-          ucapan: "Selamat menempuh hidup baru Daniel & Nadine! Semoga lancar sampai hari H dan bahagia selalu selamanya.",
+          ucapan:
+            "Selamat menempuh hidup baru Daniel & Nadine! Semoga lancar sampai hari H dan bahagia selalu selamanya.",
           attend: "hadir",
-          time: "Baru saja"
+          time: "Baru saja",
         },
         {
           nama: "Siska Wulandari",
-          ucapan: "Happy wedding Nadine! So happy for both of you. Semoga menjadi keluarga yang harmonis dan penuh cinta.",
+          ucapan:
+            "Happy wedding Nadine! So happy for both of you. Semoga menjadi keluarga yang harmonis dan penuh cinta.",
           attend: "hadir",
-          time: "1 jam lalu"
+          time: "1 jam lalu",
         },
         {
           nama: "Hendra Pratama",
-          ucapan: "Selamat ya Daniel & Nadine! Mohon maaf sepertinya berhalangan hadir karena sedang di luar kota. Doa terbaik untuk kalian berdua!",
+          ucapan:
+            "Selamat ya Daniel & Nadine! Mohon maaf sepertinya berhalangan hadir karena sedang di luar kota. Doa terbaik untuk kalian berdua!",
           attend: "tidak",
-          time: "3 jam lalu"
-        }
+          time: "3 jam lalu",
+        },
       ];
       var wishes = [],
         attend = "";
@@ -2487,7 +2490,9 @@
         /* Ambil data real-time dari Google Spreadsheet jika URL disetting */
         if (GOOGLE_SHEET_URL) {
           fetch(GOOGLE_SHEET_URL)
-            .then(function (res) { return res.json(); })
+            .then(function (res) {
+              return res.json();
+            })
             .then(function (data) {
               if (Array.isArray(data) && data.length > 0) {
                 wishes = data;
@@ -2502,7 +2507,10 @@
 
       function saveWishes() {
         try {
-          localStorage.setItem("nadine_daniel_rsvp_wishes", JSON.stringify(wishes));
+          localStorage.setItem(
+            "nadine_daniel_rsvp_wishes",
+            JSON.stringify(wishes),
+          );
         } catch (e) {}
       }
 
@@ -2545,7 +2553,7 @@
           nama: nama,
           ucapan: ucapan,
           attend: attend,
-          time: "Baru saja"
+          time: "Baru saja",
         };
 
         wishes.unshift(newWish);
@@ -2559,7 +2567,7 @@
             method: "POST",
             mode: "no-cors",
             headers: { "Content-Type": "text/plain;charset=utf-8" },
-            body: JSON.stringify(newWish)
+            body: JSON.stringify(newWish),
           }).catch(function () {});
         }
 
@@ -2580,11 +2588,16 @@
         container.innerHTML = wishes
           .map(function (w) {
             var icon = w.attend === "hadir" ? "✅" : "❌";
-            var badgeColor = w.attend === "hadir" ? "rgba(46, 204, 113, 0.2)" : "rgba(231, 76, 60, 0.2)";
+            var badgeColor =
+              w.attend === "hadir"
+                ? "rgba(46, 204, 113, 0.2)"
+                : "rgba(231, 76, 60, 0.2)";
             var badgeTextColor = w.attend === "hadir" ? "#2ecc71" : "#e74c3c";
             var badgeText = w.attend === "hadir" ? "Hadir" : "Tidak Hadir";
             var timeStr = w.time
-              ? '<span style="font-size: 10px; color: #888; margin-left: auto;">' + esc(w.time) + "</span>"
+              ? '<span style="font-size: 10px; color: #888; margin-left: auto;">' +
+                esc(w.time) +
+                "</span>"
               : "";
             return (
               '<div class="wish-item"><div class="wish-meta"><div class="wish-avatar">' +
