@@ -767,6 +767,7 @@
         object-fit: cover;
         object-position: top center;
         aspect-ratio: 3/4;
+        filter: grayscale(100%);
       }
       .couple-name {
         font-size: 14px;
@@ -2013,18 +2014,7 @@
           </p>
         </div>
       </div>
-      <div
-        style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 5px"
-        class="px"
-      >
-        <button class="btn btn-sm" id="btnAmplop">
-          <i class="fas fa-search"></i> Lihat Rekening
-        </button>
-        <button class="btn btn-sm" id="btn-hide" style="display: none">
-          <i class="far fa-eye-slash"></i> Sembunyikan
-        </button>
-      </div>
-      <div id="amplop" style="display: none" class="px">
+      <div id="amplop" class="px" style="margin-top: 15px;">
         <div class="bank-cards">
           <div class="bank-card">
             <p
@@ -2038,9 +2028,9 @@
             >
               BCA
             </p>
-            <p class="bank-acct-name">a.n Daniel Dwi Prajitno</p>
-            <p class="bank-acct-num">0812 345 678XX</p>
-            <button class="copy-btn" data-copy="0812345678XX">
+            <p class="bank-acct-name">a.n Nadine Ersabilla Oktavia</p>
+            <p class="bank-acct-num">6140583519</p>
+            <button class="copy-btn" data-copy="6140583519">
               <i class="far fa-copy"></i> Salin Rekening
             </button>
           </div>
@@ -2054,11 +2044,11 @@
                 margin-bottom: 8px;
               "
             >
-              DANA
+              BCA
             </p>
             <p class="bank-acct-name">a.n Daniel Dwi Prajitno</p>
-            <p class="bank-acct-num">0812 345 678XX</p>
-            <button class="copy-btn" data-copy="0812345678XX">
+            <p class="bank-acct-num">0880739182</p>
+            <button class="copy-btn" data-copy="0880739182">
               <i class="far fa-copy"></i> Salin Rekening
             </button>
           </div>
@@ -2381,19 +2371,8 @@
 
       /* ── BANK TOGGLE ── */
       function initBankToggle() {
-        var bs = document.getElementById("btnAmplop"),
-          bh = document.getElementById("btn-hide"),
-          a = document.getElementById("amplop");
-        bs.addEventListener("click", function () {
-          a.style.display = "block";
-          bs.style.display = "none";
-          bh.style.display = "block";
-        });
-        bh.addEventListener("click", function () {
-          a.style.display = "none";
-          bh.style.display = "none";
-          bs.style.display = "block";
-        });
+        var a = document.getElementById("amplop");
+        if (a) a.style.display = "block";
       }
 
       /* ── COPY BUTTONS ── */
