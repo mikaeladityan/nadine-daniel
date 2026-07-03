@@ -1576,7 +1576,7 @@
         <div class="netflix-logo-sub">of Daniel &amp; Nadine</div>
       </div>
 
-      <p class="cover-subtitle"><i>of</i> <b>Daniel &amp; Nadine</b></p>
+      <p class="cover-subtitle"><i>of</i> <b>Daniel</b></p>
 
       <!-- Character cards (animated) -->
       <div class="char-pair">
@@ -1838,7 +1838,7 @@
 
     <!-- ═══ SECTION DATE ═══ -->
     <section id="date">
-      <h3 class="sec-title muncul-kiri px">HARI PERNIKAHAN</h3>
+      <h3 class="sec-title muncul-kiri px">WEDDING DAY</h3>
       <p
         class="px"
         style="
@@ -1855,8 +1855,9 @@
       <div class="event-row px">
         <img
           class="event-img zoom"
-          src="assets/img/new/PHOTO-2026-06-29-13-23-36.jpg"
+          src="assets/img/NO (183).jpg.jpeg"
           alt="Resepsi Pernikahan"
+          style="filter: grayscale(100%)"
         />
         <div class="event-info muncul-kanan">
           <p><span class="badge-red">Acara:</span> Resepsi Pernikahan</p>
@@ -1948,23 +1949,44 @@
 
     <!-- ═══ SECTION GALLERY ═══ -->
     <section id="gallery">
-      <p class="section-row-label px">Foto Bersama</p>
       <h3 class="sec-title muncul-kiri px">WEDDING GALLERY</h3>
 
       <div class="gallery-grid px">
-        <!-- Wide featured -->
-        <div class="gallery-item wide" onclick="openLightbox(this)">
+        <div class="gallery-item tall" onclick="openLightbox(this)">
           <img
-            src="assets/img/new/PHOTO-2026-06-29-13-23-36.jpg"
-            alt="Daniel dan Nadine kecil"
+            src="assets/img/NO (183).jpg.jpeg"
+            alt="Daniel dan Nadine"
             loading="lazy"
           />
           <div class="gallery-overlay"></div>
         </div>
-        <!-- 2 tall -->
         <div class="gallery-item tall" onclick="openLightbox(this)">
           <img
-            src="assets/img/new/PHOTO-2026-06-29-13-22-52 2.jpg"
+            src="assets/img/NO (123).jpg.jpeg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/NO (161).jpg.jpeg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item tall" onclick="openLightbox(this)">
+          <img
+            src="assets/img/NO (174).jpg.jpeg"
+            alt="Daniel dan Nadine"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox(this)">
+          <img
+            src="assets/img/NO (179).jpg.jpeg"
             alt="Daniel dan Nadine"
             loading="lazy"
           />
@@ -2001,20 +2023,21 @@
     <section id="gift">
       <h3 class="sec-title muncul-kiri px">WEDDING GIFT</h3>
       <p class="gift-intro px">
-        Kehadiran Anda merupakan do'a serta rasa syukur bagi kami. Namun jika
-        memberi adalah bentuk cinta Anda, kami dengan senang hati menerimanya.
+        Cukup datang, tersenyum, dan doakan kami—itu sudah membuat hari kami
+        sempurna. Namun, jika Anda ingin memberikan tanda kasih, kami akan
+        menerimanya dengan penuh rasa syukur.
       </p>
       <div class="gift-addr muncul-kanan px">
         <div class="gift-addr-icon"><i class="fas fa-gifts"></i></div>
         <div>
           <p class="gift-addr-title">Kirim Kado</p>
           <p class="gift-addr-desc">
-            Nadine Ersabilla Oktavia<br />Jl. Jenggolo No.1B, Bedrek,
-            Siwalanpanji,<br />Kec. Buduran, Kab. Sidoarjo
+            Nadine Ersabilla Oktavia<br />Jl. Gajah Magersari RT.17/ RW.06
+            No.142, Kel. Magersari, Kec. Sidoarjo (Pagar Hijau)
           </p>
         </div>
       </div>
-      <div id="amplop" class="px" style="margin-top: 15px;">
+      <div id="amplop" class="px" style="margin-top: 15px">
         <div class="bank-cards">
           <div class="bank-card">
             <p
@@ -2186,7 +2209,7 @@
       </div>
       <div class="audio-np">
         <span class="audio-np-label" id="audio-np-label">Paused</span>
-        <span class="audio-np-title">I Love About You</span>
+        <span class="audio-np-title">Nuansa Romansa</span>
       </div>
     </button>
 
@@ -2273,7 +2296,7 @@
       }
       function startAudio() {
         if (!audio) return;
-        audio.currentTime = 10;
+        audio.currentTime = 127;
         audio
           .play()
           .then(function () {
@@ -2404,10 +2427,12 @@
         document.body.removeChild(ta);
       }
 
-      /* ── LIGHTBOX ── */
       function openLightbox(el) {
-        document.getElementById("lightbox-img").src =
-          el.querySelector("img").src;
+        var img = el.querySelector("img");
+        var lbImg = document.getElementById("lightbox-img");
+        lbImg.src = img.src;
+        lbImg.style.filter =
+          img.style.filter || window.getComputedStyle(img).filter;
         document.getElementById("lightbox").classList.add("open");
       }
       function closeLightbox(e) {
