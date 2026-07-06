@@ -750,13 +750,13 @@
         margin-top: 5px;
       }
       .couple-grid {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
         overflow: hidden;
       }
       .couple-card {
-        flex: 1;
+        min-width: 0;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -769,6 +769,19 @@
         aspect-ratio: 3/4;
         filter: grayscale(100%);
       }
+      .couple-card .btn {
+        max-width: 100%;
+        justify-content: center;
+        padding: 0.8em 0.5em;
+        gap: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .couple-card p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
       .couple-name {
         font-size: 14px;
         font-weight: 300;
@@ -780,6 +793,8 @@
         font-weight: 300;
         line-height: 1.5;
         color: var(--dim);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
 
       /* Save the Date card */
@@ -1016,7 +1031,7 @@
       }
       .gallery-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
       }
       .gallery-item {
